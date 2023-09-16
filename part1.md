@@ -24,9 +24,36 @@
 > 
 > Best regards,
 > 
-> [Your Name]<br /> 
+> Maxwell Goldgrabber<br /> 
 > Product Manager<br /> 
-> Lampaala
+> Lampaala Group
+
+
+> Subject: Urgent Task: Implement Post Filtering to Exclude Deleted Posts
+> 
+> Dear [Developer's Name],
+> 
+> I trust you're doing well. I have an important update to our previous discussion regarding the sorting of posts. In addition to the sorting task, there's another crucial aspect that requires your immediate attention.
+> 
+> Our customers have recently expressed their dissatisfaction with the fact that deleted posts are being displayed in the post listings. To address this issue, it's absolutely imperative that we ensure posts with a `deletedAt` timestamp are **not** shown under any circumstances.
+> 
+> **Implementation Priority**: I cannot stress enough how vital this task is. Customer satisfaction is at stake, and our reputation hinges on providing a clean and accurate user experience. To emphasize the importance of this, I must inform you that my own performance bonus is directly tied to resolving this issue promptly and effectively. I've been eyeing a Porsche for some time now, and my bonus will play a significant role in making that dream a reality.
+> 
+> **Filtering Deleted Posts**: To resolve this issue, you need to implement a method that filters the posts and excludes any that have a `deletedAt` timestamp set. Posts with a `deletedAt` timestamp should be entirely omitted from the post listings. To achieve this, please use the `filter` array function, which is a standard and efficient method for such operations.
+> 
+> **Unit Tests**: Fortunately, a fellow employee Kaarina has already taken the initiative to write unit tests for this new filtering function. These tests will be a valuable resource to ensure the accuracy and reliability of your implementation. Having these tests in place will also help us catch any issues early in the development process.
+> 
+> I understand that this task adds an extra layer of complexity to your workload, but it's non-negotiable given its critical impact on our customer satisfaction and the success of our product.
+> 
+> Please prioritize this task and let me know if you have any questions or need further guidance as you work on this implementation. Your expertise and dedication are crucial in resolving this issue promptly and ensuring our customers have the best possible experience on our platform.
+> 
+> Thank you for your commitment to this project, and I look forward to seeing this problem resolved as soon as possible. I hope to be cruising in that Porsche sooner rather than later!
+> 
+> Best regards,
+> 
+> Maxwell Goldgrabber<br />
+> Product Manager<br />
+> Lampaala Group
 
 
 ----
