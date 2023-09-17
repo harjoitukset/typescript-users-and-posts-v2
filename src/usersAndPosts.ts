@@ -1,5 +1,5 @@
-import User from './types/User';
-import Post from './types/Post';
+import { Post, User } from "./types";
+
 
 let users = require('../users.json') as User[];
 let posts = require('../posts.json') as Post[];
