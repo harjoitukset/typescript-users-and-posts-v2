@@ -73,4 +73,4 @@ Adds a `publishedAt` timestamp in each post, and `deletedAt` timestamp to random
 
 ## DummyJSON
 
-Muunneltavien tiedostojen tiedot ovat [DummyJSON](https://github.com/Ovi/DummyJSON/)-projektista, jonka on kehittänyt [Muhammad Ovi (Owais)](https://github.com/Ovi/). Tiedostot on lisensoitu MIT-lisenssillä: [https://github.com/Ovi/DummyJSON/blob/master/LICENCE](https://github.com/Ovi/DummyJSON/blob/master/LICENCE).
+The JSON files are a part of [DummyJSON](https://github.com/Ovi/DummyJSON/) project created by [Muhammad Ovi (Owais)](https://github.com/Ovi/). The files are licensed under the MIT license: [https://github.com/Ovi/DummyJSON/blob/master/LICENCE](https://github.com/Ovi/DummyJSON/blob/master/LICENCE).

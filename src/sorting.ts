@@ -16,7 +16,7 @@ export function sortPostsByPublishedDate(posts: Post[]): Post[] {
 
 /**
  * Sorts an array of user objects in ascending order based on the 'registeredAt' date.
- * Handles different data types for 'registeredAt' (integer and string).
+ * Handles different data types for 'registeredAt': integer (seconds) and string (iso).
  *
  * @param users The array of user objects to be sorted.
  * @returns New array of users sorted by `registeredAt` timestamps.
@@ -24,5 +24,8 @@ export function sortPostsByPublishedDate(posts: Post[]): Post[] {
 export function sortUsersByRegistrationDate(users: User[]): User[] {
     // TODO: Implement sorting logic. This time you are
     // allowed to use the existing `sort` method.
+
+    // NOTE! The users' timestamps are presented in Unix time, which counts seconds since epoch.
+    // JavaScript Dates, however, use milliseconds. See https://stackoverflow.com/a/221297 for more info.
     return [...users];
 }
