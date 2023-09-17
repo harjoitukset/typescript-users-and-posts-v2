@@ -5,6 +5,12 @@ export interface Post {
     userId: number;
     tags: string[];
     reactions: number;
+
+    /** Time of publishing in ISO format, for example "2023-04-10T09:45:00Z" */
+    publishedAt: string;
+
+    /** Optional time of deletion in ISO format, for example "2023-04-10T09:45:00Z" */
+    deletedAt?: string;
 }
 
 export interface User {
@@ -22,4 +28,10 @@ export interface User {
     ip: string;
     ssn: string;
     userAgent: string;
+
+    /** Users who registered through our mobile app have an integer value representing the epoch
+     *  timestamp, while users who registered through the web app have a string in ISO format. */
+    registeredAt: number | string;
 }
+
+export type UserWithPosts = User & { posts: Post[] };
