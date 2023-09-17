@@ -58,7 +58,8 @@
     },
     "ein": "20-9487066",
     "ssn": "661-64-2976",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24",
+    "registeredAt": "2022-07-16T22:57:59.361Z"
   },
   {
     "id": 2,
@@ -119,7 +120,8 @@
     },
     "ein": "52-5262907",
     "ssn": "447-08-9217",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/11.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30"
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/11.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30",
+    "registeredAt": 1638589047
   },
   {
     "id": 3,
@@ -180,7 +182,8 @@
     },
     "ein": "48-3951994",
     "ssn": "633-89-1926",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:21.0.0) Gecko/20121011 Firefox/21.0.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2; Win64; x64; rv:21.0.0) Gecko/20121011 Firefox/21.0.0",
+    "registeredAt": 1632809198
   },
   {
     "id": 4,
@@ -241,7 +244,8 @@
     },
     "ein": "71-3644334",
     "ssn": "487-28-6642",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.17 Safari/537.11"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.17 Safari/537.11",
+    "registeredAt": "2021-10-12T04:57:33.720Z"
   },
   {
     "id": 5,
@@ -302,7 +306,8 @@
     },
     "ein": "18-7178563",
     "ssn": "667-98-5357",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.1 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.1 Safari/535.1",
+    "registeredAt": 1646370305
   },
   {
     "id": 6,
@@ -363,7 +368,8 @@
     },
     "ein": "78-3192791",
     "ssn": "158-68-0184",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.0; nb-NO) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.0; nb-NO) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5",
+    "registeredAt": 1636412414
   },
   {
     "id": 7,
@@ -424,7 +430,8 @@
     },
     "ein": "29-1568401",
     "ssn": "478-11-2206",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.18.1 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5",
+    "registeredAt": "2022-07-28T07:35:22.890Z"
   },
   {
     "id": 8,
@@ -485,7 +492,8 @@
     },
     "ein": "88-4396827",
     "ssn": "238-41-5528",
-    "userAgent": "Mozilla/5.0 (X11; Linux amd64) AppleWebKit/534.36 (KHTML, like Gecko) Chrome/13.0.766.0 Safari/534.36"
+    "userAgent": "Mozilla/5.0 (X11; Linux amd64) AppleWebKit/534.36 (KHTML, like Gecko) Chrome/13.0.766.0 Safari/534.36",
+    "registeredAt": "2022-02-01T16:53:18.118Z"
   },
   {
     "id": 9,
@@ -546,7 +554,8 @@
     },
     "ein": "14-1066382",
     "ssn": "717-26-3759",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de) AppleWebKit/528.4+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de) AppleWebKit/528.4+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2",
+    "registeredAt": 1657590010
   },
   {
     "id": 10,
@@ -607,7 +616,8 @@
     },
     "ein": "21-5278484",
     "ssn": "544-66-0745",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.6 Safari/537.11"
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.6 Safari/537.11",
+    "registeredAt": 1648638429
   },
   {
     "id": 11,
@@ -668,7 +678,8 @@
     },
     "ein": "09-3791007",
     "ssn": "342-54-8422",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.792.0 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.792.0 Safari/535.1",
+    "registeredAt": 1650818580
   },
   {
     "id": 12,
@@ -728,7 +739,8 @@
     },
     "ein": "14-1242349",
     "ssn": "116-51-6131",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 4319.74.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 4319.74.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36",
+    "registeredAt": 1644683781
   },
   {
     "id": 13,
@@ -789,7 +801,8 @@
     },
     "ein": "94-0648182",
     "ssn": "217-05-3082",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4",
+    "registeredAt": 1650970323
   },
   {
     "id": 14,
@@ -850,7 +863,8 @@
     },
     "ein": "61-8316825",
     "ssn": "742-81-1714",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-en) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-en) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": "2022-07-24T14:05:08.281Z"
   },
   {
     "id": 15,
@@ -911,7 +925,8 @@
     },
     "ein": "62-0561095",
     "ssn": "855-43-8639",
-    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.14 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.14 Safari/534.24",
+    "registeredAt": "2022-09-04T10:38:52.978Z"
   },
   {
     "id": 16,
@@ -972,7 +987,8 @@
     },
     "ein": "75-1816504",
     "ssn": "677-73-1525",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.872.0 Safari/535.2"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.872.0 Safari/535.2",
+    "registeredAt": 1661841288
   },
   {
     "id": 17,
@@ -1033,7 +1049,8 @@
     },
     "ein": "92-8837697",
     "ssn": "795-36-7752",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.813.0 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.813.0 Safari/535.1",
+    "registeredAt": 1633062162
   },
   {
     "id": 18,
@@ -1094,7 +1111,8 @@
     },
     "ein": "55-4062919",
     "ssn": "551-74-1349",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0",
+    "registeredAt": 1661179783
   },
   {
     "id": 19,
@@ -1155,7 +1173,8 @@
     },
     "ein": "53-7190545",
     "ssn": "809-93-2422",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24",
+    "registeredAt": 1647104931
   },
   {
     "id": 20,
@@ -1216,7 +1235,8 @@
     },
     "ein": "88-6715551",
     "ssn": "389-03-0381",
-    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.10 Chromium/12.0.702.0 Chrome/12.0.702.0 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.10 Chromium/12.0.702.0 Chrome/12.0.702.0 Safari/534.24",
+    "registeredAt": 1653171748
   },
   {
     "id": 21,
@@ -1277,7 +1297,8 @@
     },
     "ein": "23-4116115",
     "ssn": "562-46-9709",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.0 Safari/536.3",
+    "registeredAt": 1637645551
   },
   {
     "id": 22,
@@ -1338,7 +1359,8 @@
     },
     "ein": "78-2846180",
     "ssn": "155-87-0243",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": 1640815596
   },
   {
     "id": 23,
@@ -1399,7 +1421,8 @@
     },
     "ein": "92-4814248",
     "ssn": "441-72-1229",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.872.0 Safari/535.2"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.872.0 Safari/535.2",
+    "registeredAt": 1641566549
   },
   {
     "id": 24,
@@ -1460,7 +1483,8 @@
     },
     "ein": "77-6259466",
     "ssn": "291-72-5526",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; ja-jp) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; ja-jp) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+    "registeredAt": 1640803377
   },
   {
     "id": 25,
@@ -1521,7 +1545,8 @@
     },
     "ein": "14-6307509",
     "ssn": "266-43-5297",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1063.0 Safari/536.3",
+    "registeredAt": "2021-11-09T16:24:11.304Z"
   },
   {
     "id": 26,
@@ -1582,7 +1607,8 @@
     },
     "ein": "38-0997138",
     "ssn": "407-02-8915",
-    "userAgent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25"
+    "userAgent": "Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25",
+    "registeredAt": "2022-08-27T00:32:08.930Z"
   },
   {
     "id": 27,
@@ -1643,7 +1669,8 @@
     },
     "ein": "11-3129153",
     "ssn": "408-90-5986",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2224.3 Safari/537.36",
+    "registeredAt": "2021-10-22T11:49:38.570Z"
   },
   {
     "id": 28,
@@ -1704,7 +1731,8 @@
     },
     "ein": "09-1129306",
     "ssn": "389-74-9456",
-    "userAgent": "Mozilla/6.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4"
+    "userAgent": "Mozilla/6.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4",
+    "registeredAt": "2022-08-01T13:40:16.126Z"
   },
   {
     "id": 29,
@@ -1765,7 +1793,8 @@
     },
     "ein": "31-6688179",
     "ssn": "391-33-1550",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.45 Safari/535.19"
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.45 Safari/535.19",
+    "registeredAt": "2022-06-04T03:09:46.244Z"
   },
   {
     "id": 30,
@@ -1826,7 +1855,8 @@
     },
     "ein": "51-7727524",
     "ssn": "534-76-0952",
-    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.66 Safari/535.11"
+    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.66 Safari/535.11",
+    "registeredAt": "2022-05-19T16:39:01.550Z"
   },
   {
     "id": 31,
@@ -1887,7 +1917,8 @@
     },
     "ein": "00-2318786",
     "ssn": "759-91-9214",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.813.0 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.813.0 Safari/535.1",
+    "registeredAt": "2022-03-07T16:54:41.500Z"
   },
   {
     "id": 32,
@@ -1948,7 +1979,8 @@
     },
     "ein": "59-2050847",
     "ssn": "201-38-9441",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.433.216) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.105 Safari/534.30"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.433.216) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.105 Safari/534.30",
+    "registeredAt": "2021-10-26T19:44:36.666Z"
   },
   {
     "id": 33,
@@ -2009,7 +2041,8 @@
     },
     "ein": "16-0389022",
     "ssn": "526-44-2771",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.113 Safari/534.30"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.113 Safari/534.30",
+    "registeredAt": "2022-03-31T18:34:32.649Z"
   },
   {
     "id": 34,
@@ -2070,7 +2103,8 @@
     },
     "ein": "62-1543241",
     "ssn": "840-01-4157",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_8; ja-jp) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_5_8; ja-jp) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+    "registeredAt": "2022-08-14T03:52:28.707Z"
   },
   {
     "id": 35,
@@ -2131,7 +2165,8 @@
     },
     "ein": "62-3265337",
     "ssn": "246-95-2398",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; ru-RU) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4",
+    "registeredAt": 1653161066
   },
   {
     "id": 36,
@@ -2192,7 +2227,8 @@
     },
     "ein": "78-2781654",
     "ssn": "257-77-0318",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.66 Safari/535.11"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.66 Safari/535.11",
+    "registeredAt": "2022-04-06T03:42:53.755Z"
   },
   {
     "id": 37,
@@ -2253,7 +2289,8 @@
     },
     "ein": "18-0869025",
     "ssn": "623-85-1332",
-    "userAgent": "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.20 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.20 Safari/535.1",
+    "registeredAt": "2021-10-12T07:42:59.843Z"
   },
   {
     "id": 38,
@@ -2314,7 +2351,8 @@
     },
     "ein": "20-0998849",
     "ssn": "532-99-4556",
-    "userAgent": "Mozilla/6.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1"
+    "userAgent": "Mozilla/6.0 (Windows NT 6.2; WOW64; rv:16.0.1) Gecko/20121011 Firefox/16.0.1",
+    "registeredAt": "2022-07-01T21:07:35.944Z"
   },
   {
     "id": 39,
@@ -2375,7 +2413,8 @@
     },
     "ein": "90-8079363",
     "ssn": "497-34-8207",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1; rv:21.0) Gecko/20130331 Firefox/21.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1; rv:21.0) Gecko/20130331 Firefox/21.0",
+    "registeredAt": "2022-08-16T17:07:41.023Z"
   },
   {
     "id": 40,
@@ -2436,7 +2475,8 @@
     },
     "ein": "14-2435407",
     "ssn": "414-12-1630",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_4; en-us) AppleWebKit/528.4+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_4; en-us) AppleWebKit/528.4+ (KHTML, like Gecko) Version/4.0dp1 Safari/526.11.2",
+    "registeredAt": 1655064229
   },
   {
     "id": 41,
@@ -2497,7 +2537,8 @@
     },
     "ein": "58-9897099",
     "ssn": "166-50-4378",
-    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.10 Chromium/12.0.702.0 Chrome/12.0.702.0 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.10 Chromium/12.0.702.0 Chrome/12.0.702.0 Safari/534.24",
+    "registeredAt": 1638263447
   },
   {
     "id": 42,
@@ -2558,7 +2599,8 @@
     },
     "ein": "05-7267265",
     "ssn": "539-88-5745",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24",
+    "registeredAt": 1646342506
   },
   {
     "id": 43,
@@ -2618,7 +2660,8 @@
     },
     "ein": "18-0490092",
     "ssn": "225-36-9060",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-en) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-en) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": 1653350830
   },
   {
     "id": 44,
@@ -2679,7 +2722,8 @@
     },
     "ein": "55-2571245",
     "ssn": "123-82-0739",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13",
+    "registeredAt": "2022-09-18T13:10:20.809Z"
   },
   {
     "id": 45,
@@ -2740,7 +2784,8 @@
     },
     "ein": "37-0794892",
     "ssn": "119-69-9739",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17"
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17",
+    "registeredAt": "2022-01-24T06:36:13.425Z"
   },
   {
     "id": 46,
@@ -2801,7 +2846,8 @@
     },
     "ein": "38-1305959",
     "ssn": "389-32-1053",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-en) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-en) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": 1653608738
   },
   {
     "id": 47,
@@ -2862,7 +2908,8 @@
     },
     "ein": "75-0166236",
     "ssn": "325-43-3345",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.694.0 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.694.0 Safari/534.24",
+    "registeredAt": 1656475368
   },
   {
     "id": 48,
@@ -2923,7 +2970,8 @@
     },
     "ein": "96-8880152",
     "ssn": "592-79-3644",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0",
+    "registeredAt": 1657406393
   },
   {
     "id": 49,
@@ -2984,7 +3032,8 @@
     },
     "ein": "78-1900726",
     "ssn": "390-16-1490",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.2 Safari/533.18.5",
+    "registeredAt": "2021-12-24T12:21:36.144Z"
   },
   {
     "id": 50,
@@ -3045,7 +3094,8 @@
     },
     "ein": "60-0161254",
     "ssn": "336-16-4564",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.2; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.2; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1",
+    "registeredAt": "2022-03-27T21:32:56.302Z"
   },
   {
     "id": 51,
@@ -3106,7 +3156,8 @@
     },
     "ein": "23-6742962",
     "ssn": "447-20-9472",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.54 Safari/535.2"
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.54 Safari/535.2",
+    "registeredAt": "2022-05-06T07:54:28.351Z"
   },
   {
     "id": 52,
@@ -3167,7 +3218,8 @@
     },
     "ein": "67-0750151",
     "ssn": "470-22-7201",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36",
+    "registeredAt": 1639633568
   },
   {
     "id": 53,
@@ -3228,7 +3280,8 @@
     },
     "ein": "95-4021284",
     "ssn": "168-08-0840",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.19 (KHTML, like Gecko) Chrome/11.0.661.0 Safari/534.19"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.19 (KHTML, like Gecko) Chrome/11.0.661.0 Safari/534.19",
+    "registeredAt": "2022-05-22T11:20:08.280Z"
   },
   {
     "id": 54,
@@ -3289,7 +3342,8 @@
     },
     "ein": "42-4393528",
     "ssn": "209-69-0948",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17",
+    "registeredAt": 1656495853
   },
   {
     "id": 55,
@@ -3350,7 +3404,8 @@
     },
     "ein": "69-4841659",
     "ssn": "348-15-1931",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 0.13.587) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.14 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 0.13.587) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.14 Safari/535.1",
+    "registeredAt": 1654173242
   },
   {
     "id": 56,
@@ -3411,7 +3466,8 @@
     },
     "ein": "31-5905610",
     "ssn": "654-51-8614",
-    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Ubuntu/11.04 Chromium/14.0.803.0 Chrome/14.0.803.0 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Ubuntu/11.04 Chromium/14.0.803.0 Chrome/14.0.803.0 Safari/535.1",
+    "registeredAt": 1648454221
   },
   {
     "id": 57,
@@ -3472,7 +3528,8 @@
     },
     "ein": "45-1551686",
     "ssn": "753-64-1081",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36",
+    "registeredAt": "2022-08-24T02:16:25.672Z"
   },
   {
     "id": 58,
@@ -3533,7 +3590,8 @@
     },
     "ein": "19-3560459",
     "ssn": "442-11-0328",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20130331 Firefox/21.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:21.0) Gecko/20130331 Firefox/21.0",
+    "registeredAt": "2021-10-09T17:49:22.802Z"
   },
   {
     "id": 59,
@@ -3594,7 +3652,8 @@
     },
     "ein": "90-0015285",
     "ssn": "189-66-1995",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.36 Safari/536.5",
+    "registeredAt": "2022-09-19T19:40:37.574Z"
   },
   {
     "id": 60,
@@ -3655,7 +3714,8 @@
     },
     "ein": "35-0392740",
     "ssn": "665-37-2401",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0",
+    "registeredAt": 1644296562
   },
   {
     "id": 61,
@@ -3716,7 +3776,8 @@
     },
     "ein": "22-8343449",
     "ssn": "418-66-0328",
-    "userAgent": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; pl-pl) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8F190 Safari/6533.18.5"
+    "userAgent": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3 like Mac OS X; pl-pl) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8F190 Safari/6533.18.5",
+    "registeredAt": 1643952796
   },
   {
     "id": 62,
@@ -3777,7 +3838,8 @@
     },
     "ein": "40-2838353",
     "ssn": "203-67-2339",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.433.216) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.105 Safari/534.30"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.433.216) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.105 Safari/534.30",
+    "registeredAt": "2022-07-14T13:13:22.160Z"
   },
   {
     "id": 63,
@@ -3838,7 +3900,8 @@
     },
     "ein": "85-1420630",
     "ssn": "124-88-3652",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11",
+    "registeredAt": "2022-06-06T21:17:20.733Z"
   },
   {
     "id": 64,
@@ -3899,7 +3962,8 @@
     },
     "ein": "87-4046596",
     "ssn": "104-16-2139",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.21 (KHTML, like Gecko) Chrome/19.0.1042.0 Safari/535.21"
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.21 (KHTML, like Gecko) Chrome/19.0.1042.0 Safari/535.21",
+    "registeredAt": 1652960413
   },
   {
     "id": 65,
@@ -3960,7 +4024,8 @@
     },
     "ein": "32-5895343",
     "ssn": "825-29-5126",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.699.0 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.699.0 Safari/534.24",
+    "registeredAt": "2022-06-08T21:46:30.286Z"
   },
   {
     "id": 66,
@@ -4021,7 +4086,8 @@
     },
     "ein": "63-4681374",
     "ssn": "401-32-7720",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36",
+    "registeredAt": 1640019300
   },
   {
     "id": 67,
@@ -4082,7 +4148,8 @@
     },
     "ein": "77-8741736",
     "ssn": "461-37-0787",
-    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.16 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.16 Safari/537.36",
+    "registeredAt": 1642587813
   },
   {
     "id": 68,
@@ -4143,7 +4210,8 @@
     },
     "ein": "03-3797959",
     "ssn": "323-43-6349",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.68 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.68 Safari/534.24",
+    "registeredAt": "2022-01-21T19:51:59.898Z"
   },
   {
     "id": 69,
@@ -4203,7 +4271,8 @@
     },
     "ein": "74-5856370",
     "ssn": "619-95-8805",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4",
+    "registeredAt": "2022-07-13T04:16:11.302Z"
   },
   {
     "id": 70,
@@ -4264,7 +4333,8 @@
     },
     "ein": "30-6503926",
     "ssn": "507-79-6958",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2; rv:22.0) Gecko/20130405 Firefox/23.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2; rv:22.0) Gecko/20130405 Firefox/23.0",
+    "registeredAt": 1637646980
   },
   {
     "id": 71,
@@ -4325,7 +4395,8 @@
     },
     "ein": "73-4448279",
     "ssn": "893-82-5863",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.433.216) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.105 Safari/534.30"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.433.216) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.105 Safari/534.30",
+    "registeredAt": 1645779286
   },
   {
     "id": 72,
@@ -4386,7 +4457,8 @@
     },
     "ein": "58-4278326",
     "ssn": "492-30-9840",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1062.0 Safari/536.3",
+    "registeredAt": "2021-12-11T06:01:34.198Z"
   },
   {
     "id": 73,
@@ -4447,7 +4519,8 @@
     },
     "ein": "91-1296786",
     "ssn": "183-74-0158",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0a2) Gecko/20111101 Firefox/9.0a2"
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0a2) Gecko/20111101 Firefox/9.0a2",
+    "registeredAt": "2021-11-08T12:11:08.578Z"
   },
   {
     "id": 74,
@@ -4508,7 +4581,8 @@
     },
     "ein": "35-8100332",
     "ssn": "137-52-7595",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en) AppleWebKit/526.9 (KHTML, like Gecko) Version/4.0dp1 Safari/526.8"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 5.1; en) AppleWebKit/526.9 (KHTML, like Gecko) Version/4.0dp1 Safari/526.8",
+    "registeredAt": "2022-07-01T00:32:17.366Z"
   },
   {
     "id": 75,
@@ -4569,7 +4643,8 @@
     },
     "ein": "49-5258190",
     "ssn": "283-96-5470",
-    "userAgent": "Mozilla/5.0 (Android 2.2; Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4"
+    "userAgent": "Mozilla/5.0 (Android 2.2; Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.19.4 (KHTML, like Gecko) Version/5.0.3 Safari/533.19.4",
+    "registeredAt": 1651048048
   },
   {
     "id": 76,
@@ -4630,7 +4705,8 @@
     },
     "ein": "81-0790117",
     "ssn": "716-50-1801",
-    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.0.742.91) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.93 Safari/534.30"
+    "userAgent": "Mozilla/5.0 (X11; CrOS i686 12.0.742.91) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.93 Safari/534.30",
+    "registeredAt": "2022-03-01T06:44:39.871Z"
   },
   {
     "id": 77,
@@ -4691,7 +4767,8 @@
     },
     "ein": "16-2810205",
     "ssn": "489-50-8482",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/19.77.34.5 Safari/537.1",
+    "registeredAt": 1634457755
   },
   {
     "id": 78,
@@ -4752,7 +4829,8 @@
     },
     "ein": "18-9854904",
     "ssn": "399-17-0855",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20100101 Firefox/21.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20100101 Firefox/21.0",
+    "registeredAt": "2022-08-31T05:06:01.724Z"
   },
   {
     "id": 79,
@@ -4812,7 +4890,8 @@
     },
     "ein": "12-5272156",
     "ssn": "381-67-8598",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-gb) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-gb) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+    "registeredAt": "2022-09-20T01:26:51.707Z"
   },
   {
     "id": 80,
@@ -4873,7 +4952,8 @@
     },
     "ein": "54-9237161",
     "ssn": "770-01-3913",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.75 Safari/535.7"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.75 Safari/535.7",
+    "registeredAt": 1656543691
   },
   {
     "id": 81,
@@ -4934,7 +5014,8 @@
     },
     "ein": "28-9768898",
     "ssn": "706-77-2685",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24",
+    "registeredAt": 1655632402
   },
   {
     "id": 82,
@@ -4995,7 +5076,8 @@
     },
     "ein": "20-6387226",
     "ssn": "538-22-4550",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": "2022-08-16T05:40:23.482Z"
   },
   {
     "id": 83,
@@ -5056,7 +5138,8 @@
     },
     "ein": "91-5388514",
     "ssn": "577-21-6109",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; da-dk) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_7; da-dk) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1",
+    "registeredAt": 1661604451
   },
   {
     "id": 84,
@@ -5117,7 +5200,8 @@
     },
     "ein": "39-3569216",
     "ssn": "711-15-3710",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20130328 Firefox/21.0"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1; rv:21.0) Gecko/20130328 Firefox/21.0",
+    "registeredAt": "2022-01-15T20:26:39.580Z"
   },
   {
     "id": 85,
@@ -5178,7 +5262,8 @@
     },
     "ein": "09-5993572",
     "ssn": "853-87-6751",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.04 Chromium/11.0.696.0 Chrome/11.0.696.0 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.24 (KHTML, like Gecko) Ubuntu/10.04 Chromium/11.0.696.0 Chrome/11.0.696.0 Safari/534.24",
+    "registeredAt": 1655167455
   },
   {
     "id": 86,
@@ -5239,7 +5324,8 @@
     },
     "ein": "40-3998807",
     "ssn": "679-41-9289",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24",
+    "registeredAt": 1637751603
   },
   {
     "id": 87,
@@ -5300,7 +5386,8 @@
     },
     "ein": "90-5970627",
     "ssn": "612-42-3560",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; nb-no) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; nb-no) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": "2022-02-01T11:03:35.554Z"
   },
   {
     "id": 88,
@@ -5361,7 +5448,8 @@
     },
     "ein": "74-0363371",
     "ssn": "800-98-6010",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": "2022-02-15T00:51:02.722Z"
   },
   {
     "id": 89,
@@ -5422,7 +5510,8 @@
     },
     "ein": "11-0418300",
     "ssn": "643-11-2952",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.1; cs-CZ) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.1; cs-CZ) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+    "registeredAt": "2022-01-07T17:51:00.594Z"
   },
   {
     "id": 90,
@@ -5483,7 +5572,8 @@
     },
     "ein": "46-7159801",
     "ssn": "898-15-1839",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-gb) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-gb) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+    "registeredAt": "2022-05-04T18:49:49.738Z"
   },
   {
     "id": 91,
@@ -5544,7 +5634,8 @@
     },
     "ein": "85-4090888",
     "ssn": "175-34-8315",
-    "userAgent": "Mozilla/5.0 (X11; U; Linux x86_64; en-ca) AppleWebKit/531.2+ (KHTML, like Gecko) Version/5.0 Safari/531.2+"
+    "userAgent": "Mozilla/5.0 (X11; U; Linux x86_64; en-ca) AppleWebKit/531.2+ (KHTML, like Gecko) Version/5.0 Safari/531.2+",
+    "registeredAt": 1644651595
   },
   {
     "id": 92,
@@ -5605,7 +5696,8 @@
     },
     "ein": "91-6241836",
     "ssn": "395-87-7459",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; nb-no) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; nb-no) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16",
+    "registeredAt": 1640796784
   },
   {
     "id": 93,
@@ -5666,7 +5758,8 @@
     },
     "ein": "69-0667655",
     "ssn": "450-71-7159",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1",
+    "registeredAt": "2021-12-02T00:39:29.302Z"
   },
   {
     "id": 94,
@@ -5727,7 +5820,8 @@
     },
     "ein": "82-3722860",
     "ssn": "792-11-7931",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2",
+    "registeredAt": 1649127218
   },
   {
     "id": 95,
@@ -5788,7 +5882,8 @@
     },
     "ein": "46-8483554",
     "ssn": "549-99-2136",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2226.0 Safari/537.36",
+    "registeredAt": "2022-08-02T04:24:40.555Z"
   },
   {
     "id": 96,
@@ -5849,7 +5944,8 @@
     },
     "ein": "05-8271945",
     "ssn": "123-67-9330",
-    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13"
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13",
+    "registeredAt": 1660250057
   },
   {
     "id": 97,
@@ -5910,7 +6006,8 @@
     },
     "ein": "66-4995950",
     "ssn": "252-17-8075",
-    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24"
+    "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/11.0.696.3 Safari/534.24",
+    "registeredAt": "2022-04-04T02:07:20.308Z"
   },
   {
     "id": 98,
@@ -5971,7 +6068,8 @@
     },
     "ein": "50-7730758",
     "ssn": "757-73-7944",
-    "userAgent": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; nb-no) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148a Safari/6533.18.5"
+    "userAgent": "Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; nb-no) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148a Safari/6533.18.5",
+    "registeredAt": "2021-11-29T11:09:42.801Z"
   },
   {
     "id": 99,
@@ -6032,7 +6130,8 @@
     },
     "ein": "55-7845707",
     "ssn": "281-60-8121",
-    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27"
+    "userAgent": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_6; en-us) AppleWebKit/533.20.25 (KHTML, like Gecko) Version/5.0.4 Safari/533.20.27",
+    "registeredAt": "2022-08-29T00:26:56.751Z"
   },
   {
     "id": 100,
@@ -6093,6 +6192,7 @@
     },
     "ein": "02-4892541",
     "ssn": "370-10-1238",
-    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.0; ja-JP) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16"
+    "userAgent": "Mozilla/5.0 (Windows; U; Windows NT 6.0; ja-JP) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16",
+    "registeredAt": 1642258462
   }
 ]
