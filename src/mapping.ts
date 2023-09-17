@@ -6,8 +6,12 @@ import { Post, User, UserWithPosts } from "./types";
  * @param posts The array of post objects.
  * @returns The array of UserWithPosts objects.
  */
-function mapPostsToUsers(users: User[], posts: Post[]): UserWithPosts[] {
+export function mapPostsToUsers(users: User[], posts: Post[]): UserWithPosts[] {
     // TODO: Create UserWithPosts objects by associating posts with users.
-    // Return the array of UserWithPosts objects.
-    return [];
+    return users.map(user => {
+        return {
+            ...user,
+            posts: posts.slice(0, 20) // FIXME! Only add the posts for current user
+        }
+    });
 }
