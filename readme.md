@@ -165,19 +165,107 @@ $ npm test src/tests/mapping.test.ts
 
 ## Osa 3: `sortPostsByPublishedDate` (40 % pisteistä)
 
+Tehtävän toisessa osassa sinun tulee **järjestää** eli **lajitella** kirjoitukset (Post) niiden julkaisuajan mukaan käyttäen **itse toteuttamaasi lajittelualgoritmia**.
+
+> *"Some examples where you can find direct application of sorting techniques include: Sorting by price, popularity etc in e-commerce websites"*
+>
+> [The Ohio State University. 7 algorithms and data structures every programmer must know](https://u.osu.edu/cstutorials/2016/11/21/7-algorithms-and-data-structures-every-programmer-must-know/)
+
+Tiedostossa [src/sorting.ts](./src/sorting.ts) on määriteltynä seuraava funktio:
+
+```ts
+export function sortPostsByPublishedDate(posts: Post[]): Post[] {
+}
+```
+
+Toteuta lajittelulogiikkasi tähän funktioon siten, että funktio palauttaa lopuksi uuden taulukon, joka on lajiteltu Post-objektien julkaisuajan mukaan kasvavassa järjestyksessä. **Voit halutessasi toteuttaa myös erillisiä apufunktioita.**
+
+Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi poimia aineistosta esimerkiksi pelkkiä otsikoita ja julkaisuaikoja.
+
+🚨 **Tämän harjoituksen tavoitteena on opetella itse toteuttamaan jokin tunnettu lajittelualgoritmi, joten JavaScriptin valmiin `Array.sort`-funktion käyttämistä ei sallita.** 🚨
+
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
 ```sh
 $ npm test src/tests/sorting-posts.test.ts
 ```
 
+### Yleisimmät lajittelualgoritmit
+
+Voit valita toteutettavan lajittelualgoritmin esimerkiksi seuraavista:
+
+**Lisäyslajittelu eli Insertion Sort**
+
+[https://en.wikipedia.org/wiki/Insertion_sort](https://en.wikipedia.org/wiki/Insertion_sort)
+
+<a title="Simpsons contributor / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Insertion_sort.gif"><img height="256" alt="Insertion sort" src="https://upload.wikimedia.org/wikipedia/commons/4/42/Insertion_sort.gif"></a>
+
+*Kuva: By Simpsons contributor - Own work, CC BY-SA 3.0, [https://commons.wikimedia.org/w/index.php?curid=17512147](https://commons.wikimedia.org/w/index.php?curid=17512147)*
+
+**Lomituslajittelu eli Merge Sort**
+
+[https://en.wikipedia.org/wiki/Merge_sort](https://en.wikipedia.org/wiki/Merge_sort)
+
+<a title="Swfung8 / CC BY-SA (https://creativecommons.org/licenses/by-sa/3.0)" href="https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif"><img width="256" alt="Merge-sort-example-300px" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif" style="border solid silver 1px;"></a>
+
+*Kuva: By Swfung8 - Own work, CC BY-SA 3.0, [https://commons.wikimedia.org/w/index.php?curid=14961648](https://commons.wikimedia.org/w/index.php?curid=14961648)*
+
+**Kuplalajittelu eli Bubble Sort**
+
+[https://en.wikipedia.org/wiki/Bubble_sort](https://en.wikipedia.org/wiki/Bubble_sort)
+
+<a href="https://commons.wikimedia.org/wiki/File:Bubble-sort-example-300px.gif#/media/File:Bubble-sort-example-300px.gif" title="By Swfung8 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=14953478"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="Bubble-sort-example-300px.gif" width="256" style="border solid silver 1px;"></a>
+
+*Kuva: By Swfung8 - Own work, CC BY-SA 3.0, [https://commons.wikimedia.org/w/index.php?curid=14953478](https://commons.wikimedia.org/w/index.php?curid=14953478)*
+
+**Pikalajittelu eli Quicksort**
+
+[https://en.wikipedia.org/wiki/Quicksort](https://en.wikipedia.org/wiki/Quicksort)
+
+<a href="https://commons.wikimedia.org/wiki/File:Sorting_quicksort_anim.gif#/media/File:Sorting_quicksort_anim.gif" title="By en:User:RolandH, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1965827"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif" alt="Sorting quicksort anim.gif" width="256" style="border solid silver 1px;"></a>
+
+*Kuva: By en:User:RolandH, CC BY-SA 3.0, [https://commons.wikimedia.org/w/index.php?curid=1965827](https://commons.wikimedia.org/w/index.php?curid=1965827)*
+
+### Algoritmin valintaperusteet
+
+Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen. Voit myös hyvin valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta. Muista myös, että voit kysyä Teamsissa neuvoa mihin vain tehtävässä kohtaamaasi haasteeseen liittyen. Todennäköisesti samojen haasteiden parissa kamppailee myös moni muu kurssilainen.
+
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit JavaScriptin `Array.sort`-funktiota ja antaisit sille parametrina kahta julkaisuaikaa vertailevan funktion. Voit tutustua aiheeseen esim. [mdn web docs -sivustolla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+
+Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme lajittelun itse. Käyttäjien lajittelussa saat käyttää valmista metodia.
+
+
+
 ## Osa 4: `sortUsersByRegistrationDate` (30 % pisteistä)
+
+> As part of our ongoing improvements to our platform, we've encountered a unique challenge with the `registeredAt` attribute in our user records. The `registeredAt` attribute stores the registration date for each user. However, we've noticed that different users have different data types for this attribute. **Users who registered through our mobile app have an integer value representing the epoch timestamp (in seconds), while users who registered through the web app have a string in ISO format**. It's crucial that we sort all users in ascending order by their registration date, regardless of the data type inconsistency.
+>
+> In this case, you are allowed to utilize the pre-existing `sort` method. However, I encourage you to reuse the sorting logic that you previously used when sorting posts, as it will save time and effort.
+>
+> Thank you for your dedication to our project, and I look forward to seeing your solution in action.
+>
+> Maxwell Goldgrabber<br/>
+> This email was sent from and written by ChatGPT
+>
+> P.S. Here are examples of the different types of `registeredAt` values for users:
+>
+> 1. **Epoch Timestamp (Integer)**:
+>    - User 1: Registered at 1632218400 (Represents September 21, 2021, at 12:00:00 UTC)
+>    - User 2: Registered at 1663754400 (Represents February 19, 2023, at 12:00:00 UTC)
+>
+> 2. **ISO Format (String)**:
+>    - User 3: Registered at "2022-08-15T18:30:00Z" (Represents August 15, 2022, at 18:30:00 UTC)
+>    - User 4: Registered at "2023-04-10T09:45:00Z" (Represents April 10, 2023, at 09:45:00 UTC)
+>
+> These examples demonstrate the variation in the `registeredAt` attribute's data types, with some users having integer values (epoch timestamps) and others having string values (in ISO 8601 format). It's essential that your implementation handles the different data types (integer and string) for the *registeredAt* attribute **without modifying the user records**.
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
 ```sh
 $ npm test src/tests/sorting-users.test.ts
 ```
+
+💡 *Vinkki: Suosittelemme toteuttamaan erillisen apufunktion, joka muuntaa sekä numero- että merkkijonomuodossa olevat ajanhetket yhtenäiseen muotoon.*
 
 ## Lisenssit ja tekijänoikeudet
 
