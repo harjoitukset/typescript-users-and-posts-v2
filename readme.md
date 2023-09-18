@@ -97,36 +97,87 @@ Tehtävän edelliseen versioon nähden `Post`-tietotyyppiin on tullut uudet attr
 Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostosta [src/types.ts](./src/types.ts). Tarkemmat tiedot uusista tiedoista selviävät alempaa.
 
 
+## Tehtävä
+
+Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen saateviestin. Jos et jaksa lukea tarinaa, voit hypätä viestin yli suoraan tehtävän osiin.
+
+> Subject: RE: RE: RE: RE: Users and posts
+>
+> Dear developer,
+>
+> I hope this message finds you well. We have some critical tasks ahead that require your immediate attention. These tasks are not only essential for our product's success but also for my quarterly bonus, which is directly tied to their successful completion.
+>
+> * Task 1: *filterOutDeletedPosts*
+>
+>   The first task is to implement the *filterOutDeletedPosts* function. We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
+>
+> * Task 2: *mapPostsToUsers*
+>
+>   The second task involves creating a *mapPostsToUsers* function. The previous implementation relied heavily on nested logic and *console.log* statements, making it incredibly challenging for our testers to conduct unit tests and for other teams to use the code.
+>
+>   This function will be instrumental in associating posts with users, allowing us to provide a more comprehensive user experience. Each *UserWithPosts* object should contain the user's posts.
+>
+> * Task 3: *sortPostsByPublishedDate*
+>
+>   Task three is to implement a *sortPostsByPublishedDate* function. We need this function to sort posts by *publishedAt* date using a clean and maintainable approach.
+>
+> * Task 4: *sortUsersByRegistrationDate*
+>
+>   Finally, we need to implement a *sortUsersByRegistrationDate* function. This function should sort users by their *registeredAt* date, accommodating different data types (integer and string) for this attribute. Storing strings and intergers in the same field is a small piece of technical debt that we need to deal with later.
+>
+> The urgency of these tasks cannot be overstated. The previous versions relied too heavily on nested logic and *console.log* statements, making it exceptionally difficult for our testers to conduct unit tests and for the mobile and web teams to reuse the code.
+>
+> On a lighter note, I wanted to share some exciting news. I've already made a pre-order on a Tesla, and my bonus from this quarter is playing a significant role in making that dream a reality. So, you can understand the importance of these tasks!
+>
+> Your job and my quarterly bonus are at stake if we don't address these issues promptly and effectively. I have complete confidence in your abilities, and I know you can rise to this challenge. Please prioritize these tasks and reach out if you need any guidance or assistance along the way.
+>
+> Thank you for your dedication to our project, and I look forward to seeing these improvements implemented.
+>
+> Best regards,
+>
+> Maxwell Goldgrabber<br/>
+> Product Manager<br/>
+> Lampaala Group<br/>
+> This email was sent from and written by ChatGPT
+
 ## Osa 1: `filterOutDeletedPosts` (10 % pisteistä)
 
-* [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-MDN Web Docs, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+Toteuta funktio `filterOutDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset Post-objektit, joilla on asetettuna `deletedAt`-arvo.
+
+Katso lisää [filter-metodin ohjeista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+[MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)-palvelussa.
+
+Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
 ```sh
-$ npm test
+$ npm test src/tests/filtering.test.ts
 ```
 
 ## Osa 2: `mapPostsToUsers` (20 % pisteistä)
 
-* [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-MDN Web Docs, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+Katso lisää [map-metodin ohjeista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)-palvelussa.
+
+Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
 ```sh
-$ npm test
+$ npm test src/tests/mapping.test.ts
 ```
 
 ## Osa 3: `sortPostsByPublishedDate` (40 % pisteistä)
 
+Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
+
 ```sh
-$ npm test
+$ npm test src/tests/sorting-posts.test.ts
 ```
 
 ## Osa 4: `sortUsersByRegistrationDate` (30 % pisteistä)
 
-```sh
-$ npm test
-```
+Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
+```sh
+$ npm test src/tests/sorting-users.test.ts
+```
 
 ## Lisenssit ja tekijänoikeudet
 
