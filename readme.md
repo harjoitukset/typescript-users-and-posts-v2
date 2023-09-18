@@ -1,22 +1,16 @@
-# TypeScriptin tyypit: Users & Posts
+# Users & Posts v2: Filter, Map & Sort
 
-Tässä tehtävässä harjoitellaan TypeScriptin tyyppien määrittelyä ja tyyppien hyödyntämistä osana ohjelmalogiikkaa Node.js-ympäristössä. Tehtävänä on lukea kahdesta erillisestä JSON-tiedostosta käyttäjiä ja postauksia ja yhdistellä käyttäjät niitä vastaaviin postauksiin.
+Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään taulukkofunktioihin sekä lajittelualgoritmeihin. Tehtävä on jatkoa [Users & Posts](https://github.com/harjoitukset/typescript-users-and-posts) -tehtävälle.
 
+Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun teknisen toteutuksen osalta tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita.
 
 ## GitHub classroom
 
-Tehtävä arvostellaan käyttäen [GitHub classroom](https://classroom.github.com/) -palvelua, joka suorittaa ohjelmasi ja tarkastaa sekä pisteyttää tulokset automaattisesti. Taustalla GitHub classroom hyödyntää [GitHub actions](https://github.com/features/actions) -nimistä jatkuvan integroinnin palvelua, johon tutustumme kurssilla lisää myöhemmillä viikoilla.
+Tehtävä arvostellaan käyttäen [GitHub classroom](https://classroom.github.com/) -palvelua, joka suorittaa ohjelmasi ja tarkastaa sekä pisteyttää tulokset automaattisesti. Voit tarvittaessa lähettää tehtävän tarkastettavaksi monta kertaa. Tee tällöin uusi commit ja vie (push) muutokset GitHubiin. Varmista kuitenkin, että viimeisin tekemäsi commit tuottaa parhaat pisteet.
 
-Voit tarvittaessa lähettää tehtävän tarkastettavaksi monta kertaa. Tee tällöin uusi commit ja vie (push) muutokset GitHubiin. Varmista kuitenkin, että viimeisin tekemäsi commit tuottaa parhaat pisteet.
+Tehtävät tarkastetaan automaattisesti Jest-yksikkötesteillä. Testeihin perehtyminen ei ole tehtävän suorittamiseksi välttämätöntä, mutta testit voivat auttaa hahmottamaan miten oman koodisi tulee toimia. Saat kirjoittaa halutessasi lisää testejä, mutta älä muuta tai poista valmiiksi kirjoitettuja testejä.
 
-Ratkaisusi "käyttöliittymän" ei tarvitse noudattaa pilkulleen annettuja esimerkkejä, mutta toimintalogiikan tulee olla oleellisilta osin samanlainen. Automaattisen arvioinnin vuoksi ohjelmasi tulee esim. käynnistyä täsmälleen samoilla komennoilla kuin tehtävänannossa on esitetty.
-
-
-## Tehtävän kloonaaminen
-
-Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta henkilökohtaisen kopion, kloonaa se itsellesi `git clone` -komennolla. Siirry sen jälkeen VS Codeen editoimaan tiedostoja.
-
-Kloonatessasi repositoriota **varmista, että Git-osoitteen lopussa on oma GitHub-käyttäjänimesi**. Jos käyttäjänimesi puuttuu osoitteesta, kyseessä ei ole henkilökohtainen kopiosi tehtävästä. Luo tässä tapauksessa oma classroom-kopio tehtävästä itsellesi Teams-tehtävästä löytyvän linkin avulla.
+Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta henkilökohtaisen kopion, kloonaa se itsellesi `git clone` -komennolla. **Varmista, että Git-osoitteen lopussa on oma GitHub-käyttäjänimesi**. Jos käyttäjänimesi puuttuu osoitteesta, kyseessä ei ole henkilökohtainen kopiosi tehtävästä. Luo tässä tapauksessa oma classroom-kopio tehtävästä itsellesi Teams-tehtävästä löytyvän linkin avulla.
 
 
 ## Riippuvuuksien asentaminen
@@ -27,148 +21,111 @@ Aloita asentamalla projektin riippuvuudet, jotka on määritelty `package.json`-
 $ npm install
 ```
 
-Riippuvuudet sisältävät sekä [TypeScript-kielen](https://www.npmjs.com/package/typescript), [Jest-testaustyökalun](https://www.npmjs.com/package/jest) että [`ts-node`](https://www.npmjs.com/package/ts-node)- ja [`ts-jest`](https://www.npmjs.com/package/ts-jest)-paketit TypeScript-kielisen koodin ja testien suorittamiseksi Node.js:llä. Itse Node.js sinulta tulee löytyä valmiina.
+Riippuvuudet sisältävät sekä [TypeScript-kielen](https://www.npmjs.com/package/typescript), [Jest-testaustyökalun](https://www.npmjs.com/package/jest) että [`ts-node`](https://www.npmjs.com/package/ts-node)- ja [`ts-jest`](https://www.npmjs.com/package/ts-jest)-paketit TypeScript-kielisen koodin ja testien suorittamiseksi Node.js:llä. Node.js sinulta tulee löytyä valmiina.
+
+
+## Pääohjelman suorittaminen
+
+Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](./src/usersAndPosts.ts), joka tulostaa käyttäjiä ja postauksia. Tulosteet ovat alussa väärät, mutta ne muuttuvat oikeiksi yksitellen ratkoessasi tehtäviä.
+
+```sh
+$ npm start                         # tapa 1
+$ npx ts-node src/usersAndPosts.ts  # tapa 2
+```
+
+Ohjelman tuloste on muodoltaan esim. seuraava:
+
+```
+# Terry Medhurst (2022-07-16T22:57:59.361Z)
+ - This is important to remember.
+   2023-07-11T05:33:06.104Z 2023-07-21T23:53:01.586Z
+ - One can cook on and with an open fire.
+   2023-06-30T05:30:54.612Z 2023-07-13T14:36:48.159Z
+
+# Sheldon Quigley (1638589047)
+ - His mother had always taught him
+   2023-07-13T09:33:37.100Z
+ - There are different types of secrets.
+   2023-09-01T10:02:19.997Z
+```
+
+Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika (suluissa nimen jälkeen). Postauksille on myös merkitty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika.
+
+Ohjelman kehitys on ottanut uusien ominaisuuksien vuoksi melkoisia harppauksia. Lisäksi vaatimukset koodin yksikkötestauksen sekä uudelleenkäytettävyyden osalta ovat selkeytyneet, joten se on pilkottu useiksi erillisiksi funktioiksi ja tiedostoiksi. Sinun tehtäväsi on jatkaa kehitystyötä tuoteomistajan vaatimusten mukaisesti.
+
+💡 *Sinun ei tarvitse muuttaa `usersAndPosts.ts`-tiedostoa ratkaistessasi tätä tehtävää. Tiedoston muuttaminen esim. ohjelman toiminnan tutkimiseksi on kuitenkin halutessasi sallittua.*
 
 
 ## Tehtävän data
 
-Tehtävässä hyödynnetään staattista JSON-muotoista dataa [dummyjson.com](https://dummyjson.com)-palvelusta. Tehtäväpohjan tiedostot [users.json](./users.json) sekä [posts.json](./posts.json) on ladattu suoraan tehtäväpohjaan DummyJSON-projektin [GitHub-repositoriosta](https://github.com/Ovi/DummyJSON/blob/master/src/data/), joten niitä ei tarvitse ladata ohjelmassasi verkon yli, vaan ne voidaan lukea tiedostojärjestelmästä.
+Tehtävässä hyödynnetään staattista JSON-muotoista dataa [dummyjson.com](https://dummyjson.com)-palvelusta. Tehtäväpohjan tiedostot [users.json](./data/1users.json) sekä [posts.json](./data/posts.json) on ladattu suoraan tehtäväpohjaan DummyJSON-projektin [GitHub-repositoriosta](https://github.com/Ovi/DummyJSON/blob/master/src/data/).
 
-**Users:** [users.json](./users.json)
+Tehtävän edelliseen versioon nähden `Post`-tietotyyppiin on tullut uudet attribuutit `publishedAt` sekä `deletedAt`:
 
-* Dokumentaatio: https://dummyjson.com/docs/users
-* Lähde: https://github.com/Ovi/DummyJSON/blob/master/src/data/users.json
-* Lisenssi: https://github.com/Ovi/DummyJSON/blob/master/LICENCE
-
-**Posts:** [posts.json](./posts.json)
-
-* Dokumentaatio: https://dummyjson.com/docs/posts
-* Lähde: https://github.com/Ovi/DummyJSON/blob/master/src/data/posts.json
-* Lisenssi: https://github.com/Ovi/DummyJSON/blob/master/LICENCE
-
-
-
-### JSON-tietojen lukeminen ja tyypittäminen
-
-JSON-muotoinen data voidaan lukea Node.js-sovellukseen yksinkertaisesti [require](https://nodejs.org/en/knowledge/getting-started/what-is-require/)-funktiolla, esimerkiksi seuraavasti:
-
-```js
-let posts = require('../posts.json');   // posts: any
-let users = require('../users.json');   // users: any
+```diff
+ {
+   "id": 5,
+   "title": "Hopes and dreams were dashed that day.",
+   "body": "Hopes and dreams were...",
+   "userId": 41,
+   "tags": [
+     "crime",
+     "mystery",
+     "love"
+   ],
+   "reactions": 2,
++  "publishedAt": "2023-06-01T08:07:20.410Z",
++  "deletedAt": "2023-06-14T02:16:08.513Z"
+ }
 ```
 
-`require`-funktio voi palauttaa mitä tahansa JavaScript- tai JSON-tietotyyppejä, joten sen paluuarvon tyyppi on TypeScriptissä `any`. Käytännössä molemmat JSON-tiedostot sisältävät taulukon käyttäjistä ja heihin liittyvistä viesteistä (post), eli niiden tyypit voidaan kertoa TypeScript-kääntäjälle `as`-avainsanan avulla:
+`User`-tietotyyppiin on lisäksi lisätty `registeredAt`-tieto.
 
-```js
-import User from './types/User';
-import Post from './types/Post';
-
-let users = require('../users.json') as User[];
-let posts = require('../posts.json') as Post[];
+```diff
+ {
+   "id": 1,
+   "firstName": "Terry",
+   "lastName": "Medhurst",
+   "maidenName": "Smitham",
+   "age": 50,
+   "gender": "male",
+   "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24",
++  "registeredAt": "2022-07-16T22:57:59.361Z"
+ }
 ```
 
-Yllä esiintyvä `User`-tyyppi on ennalta määritetty omassa [valmiissa tiedostossaan](./src/types/User.ts), mutta sinun tulee itse määritellä `Post`-tietotyypille sopiva rajapinta (interface).
+Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostosta [src/types.ts](./src/types.ts). Tarkemmat tiedot uusista tiedoista selviävät alempaa.
 
 
-## Osa 1: Post interface (2p)
+## Osa 1: `filterOutDeletedPosts` (10 % pisteistä)
 
-Tehtävän 1. osassa sinun tulee määritellä [posts.json](./posts.json) -tiedoston datalle oma tietotyyppi `interface Post`. Yksittäinen Post-objekti on muodoltaan esimerkiksi seuraavanlainen:
-
-```json
-{
-    "id": 1,
-    "title": "His mother had always taught him",
-    "body": "His mother had always taught him not to ever think of himself as better than others. He'd tried to live by this motto. He never looked down on those who were less fortunate or who had less money than him. But the stupidity of the group of people he was talking to made him change his mind.",
-    "userId": 9,
-    "tags": [
-      "history",
-      "american",
-      "crime"
-    ],
-    "reactions": 2
-}
-```
-
-Kaikkia attribuutteja ei ole aivan välttämätöntä määritellä osaksi interface:a, koska niitä ei käytetä tehtävän seuraavassa osassa, mutta määrittele vähintään attribuutit `id`, `title`, `body` ja `userId`. Interface tulee tallentaa tiedostoon [src/types/Post.ts](./src/types/Post.ts). Luomasi interface tulee julkaista `export default`-avainsanoilla, esim:
-
-```ts
-export default interface Post {
-    // ...
-}
-```
-
-💡 TypeScript-tyyppejä voidaan muodostaa manuaalisesti, mutta tyyppejä voidaan myös generoida varsin suoraviivaisesti olemassa oleville JSON-tietorakenteille esim. ChatGPT:n tai [muiden online-työkalujen](https://www.google.com/search?q=json+to+typescript+type+online) avulla. Jos generoit tyypit automaattisesti, lisää koodiisi kommenttina lähdeviite käyttämääsi palveluun.
-
-
-## Osa 2: Käyttäjien ja postausten yhdisteleminen (3p)
-
-Tehtävän toisessa osassa sinun tulee toteuttaa skripti [usersAndPosts.ts](./src/usersAndPosts.ts), joka lukee edellä esitellyt JSON-tiedostot ja tulostaa niissä olevien käyttäjien nimet (`firstName lastName`) sekä postausten otsikot (`title`). Tiedot tulee tulostaa siten, että kunkin käyttäjän nimen jälkeen tulostetaan kaikkien kyseisen käyttäjän tekemien postausten otsikot.
-
-Postaukset voidaan yhdistää käyttäjiin vertailemalla `post`-objektien `userId`-attribuutteja `user`-objektien `id`-attribuutteihin. Suosittelemme tulostamaan tiedot siten, että ohjelman tuloste noudattaa [Markdown-syntaksia](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax), eli esimerkiksi seuraavasti:
-
-```markdown
-# Terry Medhurst
-
-- They rushed out the door.
-- The paper was blank.
-- So what is the answer? How can you stand
-
-# Sheldon Quigley
-
-- It's an unfortunate reality that we don't teach people how to make money
-- Things aren't going well at all
-- He swung back the fishing pole and cast the line
-- Are you getting my texts???
-
-...
-```
-
-Arvioinnin kannalta tulosteen yksityiskohdilla ei ole painoarvoa, kunhan et muuta nimiä, otsikoita tai niiden keskinäistä järjestystä. Käyttäjien ja kunkin käyttäjän postausten tulee olla samassa järjestyksessä keskenään kuin annetuissa JSON-tiedostoissa.
-
-💡 Tehtävä voidaan ratkaista perinteisesti sisäkkäisillä toistorakenteilla, mutta tässä tehtävässä voi olla myös hyvä kokeilla JavaScriptin `map`-, `filter`-, `forEach`- tai `reduce`-operaatioita:
-
-* [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 * [filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-* [forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-* [reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-
 MDN Web Docs, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
-
-## Ohjelman suorittaminen ja testaaminen
-
-Kun olet asentanut tehtäväpohjan riippuvuudet `npm install`-komennolla, voit suorittaa ratkaisusi `npm start`-komennolla:
-
-```sh
-$ npm start
-```
-
-`start`-skripti sekä testeissä käytetty `test`-skripti on määritetty [package.json](./package.json)-tiedostossa seuraavasti:
-
-```json
-{
-  "scripts": {
-    "start": "ts-node src/usersAndPosts.ts",
-    "test": "jest --verbose"
-  }
-}
-```
-
-`npm start` suorittaa taustalla komennon `ts-node src/usersAndPosts.ts`. Testit suoritetaan puolestaan [Jest-testityökalun](https://jestjs.io/) avulla komennolla `npm test`:
 
 ```sh
 $ npm test
 ```
 
-Mikäli testit eivät mene läpi, kiinnitä erityisesti huomiota saamasi virheraportin *Message*-kohtaan.
+## Osa 2: `mapPostsToUsers` (20 % pisteistä)
 
+* [map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+MDN Web Docs, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-## Vinkit datan käsittelyyn
+```sh
+$ npm test
+```
 
-Käyttäjien ja heidän postauksiensa yhdistämiseksi yksi lähestymistapa on käydä käyttäjät läpi `map`-metodilla ja muodostaa jokaisesta käyttäjästä uusi olio, jolla on alkuperäisten tietojen lisäksi taulukko postauksia.
+## Osa 3: `sortPostsByPublishedDate` (40 % pisteistä)
 
-Käyttäjäkohtaiset postaustaulukot voidaan puolestaan rakentaa `filter`-metodin avulla suodattamalla kaikista postauksista ne, joiden `userId` vastaa kyseisen käyttäjän `id`:tä.
+```sh
+$ npm test
+```
 
-Voit kysellä lisää vinkkejä kurssin keskustelukanavalla.
+## Osa 4: `sortUsersByRegistrationDate` (30 % pisteistä)
+
+```sh
+$ npm test
+```
 
 
 ## Lisenssit ja tekijänoikeudet
@@ -176,6 +133,6 @@ Voit kysellä lisää vinkkejä kurssin keskustelukanavalla.
 Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 
-### DummyJSON
+## DummyJSON
 
 Tehtävässä hyödynnetyn [DummyJSON](https://github.com/Ovi/DummyJSON/)-palvelun on kehittänyt [Muhammad Ovi (Owais)](https://github.com/Ovi/) ja se on lisensoitu MIT-lisenssillä: [https://github.com/Ovi/DummyJSON/blob/master/LICENCE](https://github.com/Ovi/DummyJSON/blob/master/LICENCE).
