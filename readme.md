@@ -2,16 +2,20 @@
 
 Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään taulukkofunktioihin sekä lajittelualgoritmeihin. Tehtävä on jatkoa [Users & Posts](https://github.com/harjoitukset/typescript-users-and-posts) -tehtävälle.
 
-Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun teknisen toteutuksen osalta tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita.
+Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita sekä tehdä koodista testattavaa ja uudelleenkäytettävää.
+
 
 ## GitHub classroom
 
 Tehtävä arvostellaan käyttäen [GitHub classroom](https://classroom.github.com/) -palvelua, joka suorittaa ohjelmasi ja tarkastaa sekä pisteyttää tulokset automaattisesti. Voit tarvittaessa lähettää tehtävän tarkastettavaksi monta kertaa. Tee tällöin uusi commit ja vie (push) muutokset GitHubiin. Varmista kuitenkin, että viimeisin tekemäsi commit tuottaa parhaat pisteet.
 
-Tehtävät tarkastetaan automaattisesti Jest-yksikkötesteillä. Testeihin perehtyminen ei ole tehtävän suorittamiseksi välttämätöntä, mutta testit voivat auttaa hahmottamaan miten oman koodisi tulee toimia. Saat kirjoittaa halutessasi lisää testejä, mutta älä muuta tai poista valmiiksi kirjoitettuja testejä.
+Tehtävät tarkastetaan automaattisesti [Jest-yksikkötesteillä](./src/tests/). Testeihin perehtyminen ei ole tehtävän suorittamiseksi välttämätöntä, mutta testit voivat auttaa hahmottamaan miten oman koodisi tulee toimia.
 
 Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta henkilökohtaisen kopion, kloonaa se itsellesi `git clone` -komennolla. **Varmista, että Git-osoitteen lopussa on oma GitHub-käyttäjänimesi**. Jos käyttäjänimesi puuttuu osoitteesta, kyseessä ei ole henkilökohtainen kopiosi tehtävästä. Luo tässä tapauksessa oma classroom-kopio tehtävästä itsellesi Teams-tehtävästä löytyvän linkin avulla.
 
+💡 *Saat kirjoittaa halutessasi lisää testejä, mutta älä muuta tai poista valmiiksi kirjoitettuja testejä.*
+
+💡 *Tehtävänannossa määritettyjen funktioiden nimien, parametrien tai paluuarvojen muuttaminen ei ole sallittua testien toimivuuden varmistamiseksi.*
 
 ## Riippuvuuksien asentaminen
 
@@ -26,7 +30,7 @@ Riippuvuudet sisältävät sekä [TypeScript-kielen](https://www.npmjs.com/packa
 
 ## Pääohjelman suorittaminen
 
-Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](./src/usersAndPosts.ts), joka tulostaa käyttäjiä ja postauksia. Tulosteet ovat alussa väärät, mutta ne muuttuvat oikeiksi yksitellen ratkoessasi tehtäviä.
+Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](./src/usersAndPosts.ts), joka tulostaa käyttäjiä ja postauksia. Tulosteet ovat alussa väärät ja esimerkiksi käyttäjien nimien jälkeen tulostuu aina samat otsikot. Tulosteet muuttuvat kuitenkin oikeiksi sitä mukaa, kun ratkot tehtävän osia.
 
 ```sh
 $ npm start                         # tapa 1
@@ -36,29 +40,29 @@ $ npx ts-node src/usersAndPosts.ts  # tapa 2
 Ohjelman tuloste on muodoltaan esim. seuraava:
 
 ```
-# Terry Medhurst (2022-07-16T22:57:59.361Z)
- - This is important to remember.
-   2023-07-11T05:33:06.104Z 2023-07-21T23:53:01.586Z
- - One can cook on and with an open fire.
+# Isac Stringdate (2022-07-16T22:57:59.361Z)
+ - TypeScript for dummies
    2023-06-30T05:30:54.612Z 2023-07-13T14:36:48.159Z
+ - This post was published in 2021 and deleted in 2023
+   2021-07-11T05:33:06.104Z 2023-07-21T23:53:01.586Z
 
-# Sheldon Quigley (1638589047)
- - His mother had always taught him
-   2023-07-13T09:33:37.100Z
+# Nelson Numericdate (1638589047)
  - There are different types of secrets.
    2023-09-01T10:02:19.997Z
+ - This was published in 2023 and has not been deleted
+   2023-07-13T09:33:37.100Z
 ```
 
-Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika (suluissa nimen jälkeen). Postauksille on myös merkitty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika.
+Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika (suluissa nimen jälkeen). Postauksille on myös lisätty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika. Nämä ajat tulostuvat otsikon alapuolelle. Postauksille, jotka on poistettu, tulostuu kaksi aikaleimaa.
 
-Ohjelman kehitys on ottanut uusien ominaisuuksien vuoksi melkoisia harppauksia. Lisäksi vaatimukset koodin yksikkötestauksen sekä uudelleenkäytettävyyden osalta ovat selkeytyneet, joten se on pilkottu useiksi erillisiksi funktioiksi ja tiedostoiksi. Sinun tehtäväsi on jatkaa kehitystyötä tuoteomistajan vaatimusten mukaisesti.
+Ohjelman kehitys on ottanut uusien ominaisuuksien vuoksi melkoisia harppauksia. Lisäksi vaatimukset koodin yksikkötestauksen sekä uudelleenkäytettävyyden osalta ovat selkeytyneet, joten se on pilkottu useiksi erillisiksi funktioiksi ja tiedostoiksi. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti.
 
 💡 *Sinun ei tarvitse muuttaa `usersAndPosts.ts`-tiedostoa ratkaistessasi tätä tehtävää. Tiedoston muuttaminen esim. ohjelman toiminnan tutkimiseksi on kuitenkin halutessasi sallittua.*
 
 
 ## Tehtävän data
 
-Tehtävässä hyödynnetään staattista JSON-muotoista dataa [dummyjson.com](https://dummyjson.com)-palvelusta. Tehtäväpohjan tiedostot [users.json](./data/1users.json) sekä [posts.json](./data/posts.json) on ladattu suoraan tehtäväpohjaan DummyJSON-projektin [GitHub-repositoriosta](https://github.com/Ovi/DummyJSON/blob/master/src/data/).
+Tehtävässä hyödynnetään edellisestä tehtävästä tuttua JSON-muotoista dataa [dummyjson.com](https://dummyjson.com)-palvelusta. Tehtäväpohjan tiedostot [users.json](./data/1users.json) sekä [posts.json](./data/posts.json) on ladattu tähän git-repositorioon DummyJSON-projektin [GitHub-repositoriosta](https://github.com/Ovi/DummyJSON/blob/master/src/data/).
 
 Tehtävän edelliseen versioon nähden `Post`-tietotyyppiin on tullut uudet attribuutit `publishedAt` sekä `deletedAt`:
 
@@ -99,7 +103,9 @@ Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostos
 
 ## Tehtävä
 
-Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen saateviestin. Jos et jaksa lukea tarinaa, voit hypätä viestin yli suoraan tehtävän osiin.
+Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen saateviestin.
+
+[TL;DR](https://en.wikipedia.org/wiki/TL;DR): Jos et jaksa lukea tarinaa, voit hypätä viestin yli suoraan tehtävän osiin.
 
 > Subject: RE: RE: RE: RE: Users and posts
 >
@@ -109,21 +115,21 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 >
 > * Task 1: *filterOutDeletedPosts*
 >
->   The first task is to implement the *filterOutDeletedPosts* function. We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
+>   The first task is to implement the [*filterOutDeletedPosts* function](./src/filtering.ts). We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
 >
 > * Task 2: *mapPostsToUsers*
 >
->   The second task involves creating a *mapPostsToUsers* function. The previous implementation relied heavily on nested logic and *console.log* statements, making it incredibly challenging for our testers to conduct unit tests and for other teams to use the code.
+>   The second task involves creating a [*mapPostsToUsers* function](./src/mapping.ts). The previous implementation relied heavily on nested logic and *console.log* statements, making it incredibly challenging for our testers to conduct unit tests and for other teams to use the code.
 >
->   This function will be instrumental in associating posts with users, allowing us to provide a more comprehensive user experience. Each *UserWithPosts* object should contain the user's posts.
+>   This function will be instrumental in associating posts with users.
 >
 > * Task 3: *sortPostsByPublishedDate*
 >
->   Task three is to implement a *sortPostsByPublishedDate* function. We need this function to sort posts by *publishedAt* date using a clean and maintainable approach.
+>   Task three is to implement a [*sortPostsByPublishedDate* function](./src/sorting.ts). We need this function to sort posts by *publishedAt* by implementing [a sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm) ourselves.
 >
 > * Task 4: *sortUsersByRegistrationDate*
 >
->   Finally, we need to implement a *sortUsersByRegistrationDate* function. This function should sort users by their *registeredAt* date, accommodating different data types (integer and string) for this attribute. Storing strings and intergers in the same field is a small piece of technical debt that we need to deal with later.
+>   Finally, we need to implement a [*sortUsersByRegistrationDate* function](./src/sorting.ts). This function should sort users by their *registeredAt* date, accommodating different data types (integer and string) for this attribute. Storing strings and intergers in the same field is a small piece of technical debt that we just need to accept for now.
 >
 > The urgency of these tasks cannot be overstated. The previous versions relied too heavily on nested logic and *console.log* statements, making it exceptionally difficult for our testers to conduct unit tests and for the mobile and web teams to reuse the code.
 >
