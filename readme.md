@@ -167,6 +167,11 @@ Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komenno
 
 ```sh
 $ npm test src/tests/mapping.test.ts
+
+mapUsersWithPosts
+  ✓ posts are mapped with users correctly
+  ✓ function does not modify given users
+  ✓ empty input arrays are handled without errors
 ```
 
 ## Osa 3: `sortPostsByPublishedDate` (40 % pisteistä)
