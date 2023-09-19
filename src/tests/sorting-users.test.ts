@@ -42,7 +42,7 @@ describe('sorting users by registration date', () => {
         let sameUserTwice = [string2020, string2020];
         let sorted = sortUsersByRegistrationDate(sameUserTwice);
 
-        assert.deepEqual(sorted, [[string2020, string2020]]);
+        assert.deepEqual(sorted, [string2020, string2020]);
     });
 
     test('sorting an empty array must not throw exceptions', () => {

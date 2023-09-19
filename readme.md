@@ -193,6 +193,13 @@ Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komenno
 
 ```sh
 $ npm test src/tests/sorting-posts.test.ts
+
+sorting posts by publishedAt
+  ✓ post are returned in correct order
+  ✓ sorting handles posts with identical dates correctly
+  ✓ sorting an empty array should not throw exceptions
+  ✓ sorting should not modify the original array
+  ✓ sorting posts must not utilize Array.sort
 ```
 
 🚨 **Tämän harjoituksen tavoitteena on opetella itse toteuttamaan jokin tunnettu lajittelualgoritmi, joten JavaScriptin valmiin `Array.sort`-funktion käyttämistä ei sallita.** 🚨
@@ -271,6 +278,15 @@ Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komenno
 
 ```sh
 $ npm test src/tests/sorting-users.test.ts
+
+sorting users by registration date
+  ✓ users with Unix timestamps are sorted in correct order
+  ✓ users with ISO dates are sorted in correct order
+  ✓ users with both numeric and string dates are sorted in correct order
+  ✓ sorting handles posts with identical dates without errors
+  ✓ sorting an empty array must not throw exceptions
+  ✓ sorting must not modify the users
+  ✓ sorting must not modify the original array
 ```
 
 💡 *Vinkki: Suosittelemme toteuttamaan erillisen apufunktion, joka muuntaa sekä numero- että merkkijonomuodossa olevat ajanhetket yhtenäiseen muotoon.*
