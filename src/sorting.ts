@@ -10,7 +10,7 @@ import { Post, User } from "./types";
 export function sortPostsByPublishedDate(posts: Post[]): Post[] {
     // TODO: Implement manual sorting logic here.
     // The existing `sort` method must not be used!
-    // See bubble sort, insertion sort, quicksort or others.
+    // See https://en.wikipedia.org/wiki/Sorting_algorithm.
     return [...posts];
 }
 
@@ -22,10 +22,9 @@ export function sortPostsByPublishedDate(posts: Post[]): Post[] {
  * @returns New array of users sorted by `registeredAt` timestamps.
  */
 export function sortUsersByRegistrationDate(users: User[]): User[] {
-    // TODO: Implement sorting logic. This time you are
-    // allowed to use the existing `sort` method.
+    // TODO: Implement sorting logic. This time you are allowed to use the existing `sort` method.
 
     // NOTE! The users' timestamps are presented in Unix time, which counts seconds since epoch.
-    // JavaScript Dates, however, use milliseconds. See https://stackoverflow.com/a/221297 for more info.
+    // JavaScript Dates use milliseconds instead of seconds. See https://stackoverflow.com/a/221297 for more info.
     return [...users];
 }

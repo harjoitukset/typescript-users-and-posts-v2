@@ -185,7 +185,7 @@ export function sortPostsByPublishedDate(posts: Post[]): Post[] {
 }
 ```
 
-Toteuta lajittelulogiikkasi tähän funktioon siten, että funktio palauttaa lopuksi uuden taulukon, joka on lajiteltu Post-objektien julkaisuajan mukaan kasvavassa järjestyksessä. **Voit halutessasi toteuttaa myös erillisiä apufunktioita.**
+Toteuta lajittelulogiikkasi tähän funktioon siten, että funktio palauttaa uuden taulukon, joka on lajiteltu Post-objektien julkaisuajan mukaan kasvavassa järjestyksessä. **Voit halutessasi toteuttaa myös erillisiä apufunktioita.**
 
 Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi poimia aineistosta esimerkiksi pelkkiä otsikoita ja julkaisuaikoja.
 
