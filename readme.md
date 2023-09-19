@@ -150,11 +150,11 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 
 Toteuta funktio `filterOutDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset Post-objektit, joilla on asetettuna `deletedAt`-arvo.
 
-Katso lisää [filter-metodista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)-palvelussa.
+Lue lisää filter-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
-```sh
+```
 $ npm test src/tests/filtering.test.ts
 
 filtering posts
@@ -167,11 +167,11 @@ filtering posts
 
 Tiedostossa [src/mapping.ts](./src/mapping.ts) on pohja funktiolle, joka ottaa parametreinaan taulukot `User`- sekä `Post`-objekteista. Tehtävänäsi on jatkokehittää tätä funktiota siten, että se lisää käyttäjille taulukon hänen omista `Post`-objekteistaan. Tuloksena funktio palauttaa `UserWithPosts`-taulukon. `UserWithPosts` on määritetty [src/types.ts](./src/types.ts)-tiedostossa.
 
-Katso lisää [map-metodista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)-palvelussa.
+Lue lisää map-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
-```sh
+```
 $ npm test src/tests/mapping.test.ts
 
 mapUsersWithPosts
@@ -197,7 +197,7 @@ Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi 
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
-```sh
+```
 $ npm test src/tests/sorting-posts.test.ts
 
 sorting posts by publishedAt
@@ -251,7 +251,7 @@ Voit valita toteutettavan lajittelualgoritmin esimerkiksi seuraavista:
 
 Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden tehokkuuteen. Voit myös hyvin valita sen, joka vaikuttaa toteutukseltaan sopivan yksinkertaiselta. Muista myös, että voit kysyä Teamsissa neuvoa mihin vain tehtävässä kohtaamaasi haasteeseen liittyen. Todennäköisesti samojen haasteiden parissa kamppailee myös moni muu kurssilainen.
 
-**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit JavaScriptin `Array.sort`-funktiota ja antaisit sille parametrina kahta julkaisuaikaa vertailevan funktion. Voit tutustua aiheeseen esim. [mdn web docs -sivustolla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+**Huom!** Oikeassa ohjelmistoprojektissa käyttäisit JavaScriptin `Array.sort`-funktiota ja antaisit sille parametrina kahta julkaisuaikaa vertailevan funktion. Voit tutustua aiheeseen esim. [MDN Web Docs -sivustolla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 
 Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme lajittelun itse. Tehtävän seuraavassa osassa saat käyttää valmista metodia.
 
@@ -282,7 +282,7 @@ Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme la
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
-```sh
+```
 $ npm test src/tests/sorting-users.test.ts
 
 sorting users by registration date
