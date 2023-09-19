@@ -30,8 +30,13 @@ export interface User {
     userAgent: string;
 
     /** Users who registered through our mobile app have an integer value representing the epoch
-     *  timestamp, while users who registered through the web app have a string in ISO format. */
+     *  timestamp in seconds, while users who registered through the web app have a string in ISO format. */
     registeredAt: number | string;
 }
 
+/**
+ * Represents a user with associated posts.
+ * This union type combines attributes from the 'User' class with a list of 'Post' objects.
+ * It is used to represent users along with their posts.
+ */
 export type UserWithPosts = User & { posts: Post[] };

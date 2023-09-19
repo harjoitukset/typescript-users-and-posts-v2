@@ -138,7 +138,7 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 > Maxwell Goldgrabber<br/>
 > Product Manager<br/>
 > Lampaala Group<br/>
-> This email was sent from and written by ChatGPT
+> This email was written by ChatGPT
 
 ## Osa 1: `filterOutDeletedPosts` (10 % pisteistä)
 
@@ -150,11 +150,16 @@ Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komenno
 
 ```sh
 $ npm test src/tests/filtering.test.ts
+
+filtering posts
+  ✓ active posts are included in the result
+  ✓ posts marked as deleted are excluded from the result
+  ✓ the function does not modify the original array
 ```
 
 ## Osa 2: `mapPostsToUsers` (20 % pisteistä)
 
-Tiedostossa [src/mapping.ts](./src/mapping.ts) on pohja funktiolle, joka ottaa parametreinaan taulukot `User`- sekä `Post`-objekteista. Tehtävänäsi on jatkokehittää tätä funktiota siten, että se lisää käyttäjille taulukon hänen omista `Post`-objekteistaan. Tuloksena funktio palauttaa `UserWithPosts`-taulukon. `UsersWithPosts` on määritetty [src/types.ts](./src/types.ts)-tiedostossa.
+Tiedostossa [src/mapping.ts](./src/mapping.ts) on pohja funktiolle, joka ottaa parametreinaan taulukot `User`- sekä `Post`-objekteista. Tehtävänäsi on jatkokehittää tätä funktiota siten, että se lisää käyttäjille taulukon hänen omista `Post`-objekteistaan. Tuloksena funktio palauttaa `UserWithPosts`-taulukon. `UserWithPosts` on määritetty [src/types.ts](./src/types.ts)-tiedostossa.
 
 Katso lisää [map-metodista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)-palvelussa.
 
@@ -230,20 +235,20 @@ Voit valita itsellesi mieluisen algoritmin esimerkiksi tutustumalla ensin niiden
 
 **Huom!** Oikeassa ohjelmistoprojektissa käyttäisit JavaScriptin `Array.sort`-funktiota ja antaisit sille parametrina kahta julkaisuaikaa vertailevan funktion. Voit tutustua aiheeseen esim. [mdn web docs -sivustolla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 
-Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme lajittelun itse. Käyttäjien lajittelussa saat käyttää valmista metodia.
+Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme lajittelun itse. Tehtävän seuraavassa osassa saat käyttää valmista metodia.
 
 
 
 ## Osa 4: `sortUsersByRegistrationDate` (30 % pisteistä)
 
-> As part of our ongoing improvements to our platform, we've encountered a unique challenge with the `registeredAt` attribute in our user records. The `registeredAt` attribute stores the registration date for each user. However, we've noticed that different users have different data types for this attribute. **Users who registered through our mobile app have an integer value representing the epoch timestamp (in seconds), while users who registered through the web app have a string in ISO format**. It's crucial that we sort all users in ascending order by their registration date, regardless of the data type inconsistency.
+> As part of our ongoing improvements to our platform, we've encountered a unique challenge with the `registeredAt` attribute in our user records. The `registeredAt` attribute stores the registration date for each user. However, we've noticed that different users have different data types for this attribute. **Users who registered through our mobile app have [an integer value representing the epoch timestamp (in seconds)](https://en.wikipedia.org/wiki/Unix_time), while users who registered through the web app have [a date string in ISO format](https://en.wikipedia.org/wiki/ISO_8601)**. It's crucial that we sort all users in ascending order by their registration date, regardless of the data type inconsistency.
 >
-> In this case, you are allowed to utilize the pre-existing `sort` method. However, I encourage you to reuse the sorting logic that you previously used when sorting posts, as it will save time and effort.
+> In this case, you are allowed to utilize the pre-existing `sort` method. However, I encourage you to reuse the sorting logic that you previously used when sorting posts.
 >
 > Thank you for your dedication to our project, and I look forward to seeing your solution in action.
 >
 > Maxwell Goldgrabber<br/>
-> This email was sent from and written by ChatGPT
+> This email was written by ChatGPT
 >
 > P.S. Here are examples of the different types of `registeredAt` values for users:
 >
@@ -265,9 +270,12 @@ $ npm test src/tests/sorting-users.test.ts
 
 💡 *Vinkki: Suosittelemme toteuttamaan erillisen apufunktion, joka muuntaa sekä numero- että merkkijonomuodossa olevat ajanhetket yhtenäiseen muotoon.*
 
+
 ## Lisenssit ja tekijänoikeudet
 
 Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+Tehtävänannon, käsiteltävien tiedostojen sekä lähdekoodien toteutuksessa on hyödynnetty ChatGPT 3.5:ttä.
 
 
 ## DummyJSON
