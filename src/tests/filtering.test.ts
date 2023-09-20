@@ -35,11 +35,17 @@ describe('filtering posts', () => {
         assert.deepEqual(filtered, []);
     });
 
+    test('deleted posts are removed from the beginning, end and between active articles', () => {
+        let original = [deleted2022, active2022, deleted2022, active2023, deleted2023];
+        let filtered = filterOutDeletedPosts(original);
+
+        assert.deepEqual(filtered, [active2022, active2023], 'Deleted posts must be omitted from all positions');
+    });
+
     test('the function does not modify the original array', () => {
         let original = [active2022, deleted2022, active2023, deleted2023];
         let filtered = filterOutDeletedPosts(original);
 
         assert.deepEqual(original, [active2022, deleted2022, active2023, deleted2023], 'filterOutDeletedPosts must not modify the given array');
-        assert.deepEqual(filtered, [active2022, active2023], 'Deleted posts must be filtered between active articles');
     });
 });

@@ -160,6 +160,7 @@ $ npm test src/tests/filtering.test.ts
 filtering posts
   ✓ active posts are included in the result
   ✓ posts marked as deleted are excluded from the result
+  ✓ deleted posts are removed from the beginning, end and between active articles
   ✓ the function does not modify the original array
 ```
 
