@@ -53,9 +53,9 @@ Ohjelman tuloste on muodoltaan esim. seuraava:
    2023-07-13T09:33:37.100Z
 ```
 
-Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika (suluissa nimen jälkeen). Postauksille on myös lisätty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika. Nämä ajat tulostuvat otsikon alapuolelle. Postauksille, jotka on poistettu, tulostuu kaksi aikaleimaa.
+Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika (suluissa nimen jälkeen). Postauksille on myös lisätty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika. Nämä ajat tulostuvat otsikon alapuolelle. Postauksille, jotka on poistettu, tulostuu siis kaksi aikaleimaa.
 
-Ohjelman kehitys on ottanut uusien ominaisuuksien vuoksi melkoisia harppauksia. Lisäksi vaatimukset koodin yksikkötestauksen sekä uudelleenkäytettävyyden osalta ovat selkeytyneet, joten se on pilkottu useiksi erillisiksi funktioiksi ja tiedostoiksi. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti.
+Ohjelman kehitys on ottanut uusien ominaisuuksien vuoksi melkoisia harppauksia. Lisäksi vaatimukset **koodin yksikkötestauksen** sekä **uudelleenkäytettävyyden** osalta ovat selkeytyneet, joten ohjelma on pilkottu useisiin erillisiin funktioihin ja tiedostoihin. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti.
 
 💡 *Sinun ei tarvitse muuttaa `usersAndPosts.ts`-tiedostoa ratkaistessasi tätä tehtävää. Tiedoston muuttaminen esim. ohjelman toiminnan tutkimiseksi on kuitenkin halutessasi sallittua.*
 
