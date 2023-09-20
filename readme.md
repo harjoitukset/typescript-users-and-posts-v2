@@ -40,7 +40,7 @@ $ npx ts-node src/usersAndPosts.ts  # tapa 2
 Ohjelman tuloste on muodoltaan esim. seuraava:
 
 ```
-# Isac Stringdate (2022-07-16T22:57:59.361Z)
+# Samantha Stringdate (2022-07-16T22:57:59.361Z)
  - TypeScript for dummies
    2023-06-30T05:30:54.612Z 2023-07-13T14:36:48.159Z
  - This post was published in 2021 and deleted in 2023
@@ -98,7 +98,7 @@ Tehtävän edelliseen versioon nähden `Post`-tietotyyppiin on tullut uudet attr
  }
 ```
 
-Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostosta [src/types.ts](./src/types.ts). Tarkemmat tiedot uusista tiedoista selviävät alempaa.
+Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostosta [src/types.ts](./src/types.ts). Tarkemmat tiedot uusista tiedoista selviävät alempaa. Jos aihe kiinnostaa, löydät tiedostojen muokkauksessa käytetyt skriptit [data](./data/)-hakemistosta.
 
 
 ## Tehtävä
@@ -193,7 +193,7 @@ export function sortPostsByPublishedDate(posts: Post[]): Post[] {
 
 Toteuta lajittelulogiikkasi tähän funktioon siten, että funktio palauttaa uuden taulukon, joka on lajiteltu Post-objektien julkaisuajan mukaan kasvavassa järjestyksessä. **Voit halutessasi toteuttaa myös erillisiä apufunktioita.**
 
-Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi poimia aineistosta esimerkiksi pelkkiä otsikoita ja julkaisuaikoja.
+Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi poimia aineistosta esimerkiksi pelkkiä otsikoita ja julkaisuaikoja. Et saa myöskään muuttaa annettuja taulukkoa tai sillä olevia objekteja.
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
@@ -259,6 +259,8 @@ Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme la
 
 ## Osa 4: `sortUsersByRegistrationDate` (30 % pisteistä)
 
+Tehtävän viimeinen osa on toinen lajittelu, jossa lajiteltavan aineiston vaihtelevat tietotyypit edellyttävät hieman soveltamista:
+
 > As part of our ongoing improvements to our platform, we've encountered a unique challenge with the `registeredAt` attribute in our user records. The `registeredAt` attribute stores the registration date for each user. However, we've noticed that different users have different data types for this attribute. **Users who registered through our mobile app have [an integer value representing the epoch timestamp (in seconds)](https://en.wikipedia.org/wiki/Unix_time), while users who registered through the web app have [a date string in ISO format](https://en.wikipedia.org/wiki/ISO_8601)**. It's crucial that we sort all users in ascending order by their registration date, regardless of the data type inconsistency.
 >
 > In this case, you are allowed to utilize the pre-existing `sort` method. However, I encourage you to reuse the sorting logic that you previously used when sorting posts.
@@ -280,6 +282,10 @@ Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme la
 >
 > These examples demonstrate the variation in the `registeredAt` attribute's data types, with some users having integer values (epoch timestamps) and others having string values (in ISO 8601 format). It's essential that your implementation handles the different data types (integer and string) for the *registeredAt* attribute **without modifying the user records**.
 
+Käyttäjiä vertaillessasi siis sinun tulee siis huomioida, että niiden rekisteröitymisaika saattaa olla tallennettuna kahdella eri tavalla. Tässä voi olla hyödyksi toteuttaa erillinen apufunktio, joka palauttaa käyttäjästä riippumatta rekisteröitymisajan aina samassa muodossa. Lisäksi saatat hyötyä [`typeof`-operaattorista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), [Date-luokasta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) tai mahdollisesti [StackOverflow-keskusteluista](https://stackoverflow.com/questions/4631928/convert-utc-epoch-to-local-date).
+
+Tässä osassa saat käyttää [JavaScriptin valmista sort-metodia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), joskin edellisessä osassa toteuttamasi lajittelualgoritmin jatkokehittäminen ["geneeriseksi"](https://www.typescriptlang.org/docs/handbook/2/generics.html) voi olla opettavainen kokemus.
+
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
 ```
@@ -295,10 +301,8 @@ sorting users by registration date
   ✓ sorting must not modify the original array
 ```
 
-💡 *Vinkki: Suosittelemme toteuttamaan erillisen apufunktion, joka muuntaa sekä numero- että merkkijonomuodossa olevat ajanhetket yhtenäiseen muotoon.*
 
-
-## Lisenssit ja tekijänoikeudet
+## Lisenssi ja tekijät
 
 Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 

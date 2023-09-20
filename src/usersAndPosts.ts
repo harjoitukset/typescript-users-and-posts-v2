@@ -7,10 +7,10 @@ import { Post, User } from "./types";
 function getPosts(): Post[] {
     let posts = require('../data/posts.json') as Post[];
 
-    // Task: implement logic for excluding posts that have been deleted:
+    // exclude posts that are marked as deleted:
     posts = filterOutDeletedPosts(posts);
 
-    // Task: implement sorting logic based on publish dates
+    // posts are sorted from oldest to newest:
     posts = sortPostsByPublishedDate(posts);
 
     return posts;
@@ -19,7 +19,7 @@ function getPosts(): Post[] {
 function getUsers(): User[] {
     let users = require('../data/users.json') as User[];
 
-    // Task: implement sorting based on registration date
+    // users are sorted in ascending order by registration date
     users = sortUsersByRegistrationDate(users);
 
     return users;
@@ -29,7 +29,7 @@ function printUsersAndPosts() {
     const users = getUsers();
     const posts = getPosts();
 
-    // Task: refactor code so that each user has an array of posts:
+    // posts are combined to users in a testable and reusable way
     let usersAndPosts = mapPostsToUsers(users, posts);
 
     usersAndPosts.forEach(user => {
@@ -40,7 +40,7 @@ function printUsersAndPosts() {
             console.log(`   ${p.publishedAt} ${p.deletedAt ?? ''}`)
         });
 
-        console.log(); // Empty line between each user
+        console.log(); // empty line between each user
     });
 }
 
