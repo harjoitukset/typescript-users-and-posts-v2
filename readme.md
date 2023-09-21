@@ -98,7 +98,7 @@ Tehtävän edelliseen versioon nähden `Post`-tietotyyppiin on tullut uudet attr
  }
 ```
 
-Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostosta [src/types.ts](./src/types.ts). Tarkemmat tiedot uusista tiedoista selviävät alempaa. Jos aihe kiinnostaa, löydät tiedostojen muokkauksessa käytetyt skriptit [data](./data/)-hakemistosta.
+Näitä tietotyyppejä vastaavat TypeScript-tyypit löytyvät valmiina tiedostosta [src/types.ts](./src/types.ts). Tarkemmat tiedot uusista tiedoista selviävät alempaa. Jos aihe kiinnostaa, löydät tiedostojen muokkauksessa käytetyt skriptit [src/scripts/](./src/scripts/)-hakemistosta.
 
 
 ## Tehtävä

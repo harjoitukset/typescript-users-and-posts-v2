@@ -1,8 +1,8 @@
 # Scripts for modifying users and posts
 
-This folder contains scripts for modifying the `users.json` and `posts.json` files by adding randomized timestamps to the objects.
+This folder contains `users.json` and `posts.json` files with randomized timestamps. The scripts that were used in adding the timestamps are located in [../src/scripts/](../src/scripts/).
 
-## user-registeredAt.ts
+## [user-registeredAt.ts](../src/scripts/user-registeredAt.ts)
 
 Adds a `registeredAt` timestamp in each user:
 
@@ -35,7 +35,7 @@ Adds a `registeredAt` timestamp in each user:
  ]
 ```
 
-## posts-publishedAndDeletedAt.ts
+## [posts-publishedAndDeletedAt.ts](../src/scripts/posts-publishedAndDeletedAt.ts)
 
 Adds a `publishedAt` timestamp in each post, and `deletedAt` timestamp to random posts:
 

@@ -1,7 +1,6 @@
-import { writeFileSync } from "fs";
-import { User } from "../src/types";
+import { User } from "../types";
 
-const users = require('./users.json') as User[];
+const users = require('../../data/users.json') as User[];
 const YEAR_IN_MILLISECONDS = 365 * 24 * 60 * 60 * 1_000;
 
 // Add `registeredAt` to all Users.
@@ -16,5 +15,5 @@ users.forEach((user) => {
 });
 
 let usersJson = JSON.stringify(users, null, 2);
-writeFileSync(__dirname + '/users.json', usersJson);
+console.log(usersJson);
 

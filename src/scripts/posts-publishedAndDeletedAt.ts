@@ -1,7 +1,6 @@
-import { writeFileSync } from "fs";
-import { Post } from "../src/types";
+import { Post } from "../types";
 
-const posts = require('./posts.json') as Post[];
+const posts = require('../../data/posts.json') as Post[];
 
 const today = new Date();
 const MONTH_MILLISECONDS = 30 * 24 * 60 * 60 * 1_000;
@@ -21,5 +20,5 @@ posts.filter(p => Math.random() < 0.25).forEach(post => {
 
 
 let postsJson = JSON.stringify(posts, null, 2);
-writeFileSync(__dirname + '/posts.json', postsJson);
+console.log(postsJson);
 
