@@ -5,9 +5,9 @@ import { sortPostsByPublishedDate } from '../sorting';
 
 
 describe('sorting posts by publishedAt', () => {
-    const first: Post = { publishedAt: '2022-06-01T08:07:20.410Z', title: 'Posted January 2022' } as Post;
-    const second: Post = { publishedAt: '2023-06-01T08:07:20.410Z', title: 'Posted January 2023' } as Post;
-    const third: Post = { publishedAt: '2023-12-01T08:07:20.410Z', title: 'Posted December 2023' } as Post;
+    const first: Post = { publishedAt: '2022-01-01T08:07:20.410Z', title: 'Posted in January 2022' } as Post;
+    const second: Post = { publishedAt: '2023-01-01T08:07:20.410Z', title: 'Posted in January 2023' } as Post;
+    const third: Post = { publishedAt: '2023-12-01T08:07:20.410Z', title: 'Posted in December 2023' } as Post;
 
     const unordered = [third, first, second];
 
