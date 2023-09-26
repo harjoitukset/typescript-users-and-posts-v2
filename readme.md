@@ -283,9 +283,7 @@ Tehtävän viimeinen osa on toinen lajittelu, jossa lajiteltavan aineiston vaiht
 >
 > These examples demonstrate the variation in the `registeredAt` attribute's data types, with some users having integer values (epoch timestamps) and others having string values (in ISO 8601 format). It's essential that your implementation handles the different data types (integer and string) for the *registeredAt* attribute **without modifying the user records**.
 
-Käyttäjiä vertaillessasi siis sinun tulee siis huomioida, että niiden rekisteröitymisaika saattaa olla tallennettuna kahdella eri tavalla. Tässä voi olla hyödyksi toteuttaa erillinen apufunktio, joka palauttaa käyttäjästä riippumatta rekisteröitymisajan aina samassa muodossa. Lisäksi saatat hyötyä [`typeof`-operaattorista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), [Date-luokasta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) tai mahdollisesti [StackOverflow-keskusteluista](https://stackoverflow.com/questions/4631928/convert-utc-epoch-to-local-date).
-
-Tässä osassa saat käyttää [JavaScriptin valmista sort-metodia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), joskin edellisessä osassa toteuttamasi lajittelualgoritmin jatkokehittäminen ["geneeriseksi"](https://www.typescriptlang.org/docs/handbook/2/generics.html) voi olla opettavainen kokemus.
+Käyttäjiä vertaillessasi siis sinun tulee siis huomioida, että niiden rekisteröitymisaika saattaa olla tallennettuna kahdella eri tavalla. Tässä voi olla hyödyksi toteuttaa erillinen apufunktio, joka palauttaa käyttäjästä riippumatta rekisteröitymisajan aina samassa muodossa. Lisäksi saatat hyötyä [`typeof`-operaattorista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), [Date-luokasta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) tai mahdollisesti [StackOverflow-keskusteluista](https://stackoverflow.com/questions/4631928/convert-utc-epoch-to-local-date). Tässä osassa saat käyttää [JavaScriptin valmista sort-metodia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 
 Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
 
@@ -302,6 +300,7 @@ sorting users by registration date
   ✓ sorting must not modify the original array
 ```
 
+🚀 *Vaikka saat käyttää valmista sort-metodia, edellisessä osassa toteuttamasi lajittelualgoritmin jatkokehittäminen ["geneeriseksi"](https://www.typescriptlang.org/docs/handbook/2/generics.html) voi olla opettavainen kokemus. Geneerisistä tyypeistä löydät lisätietoa esim. videolta [TypeScript Generics are EASY once you know this (ByteGrad)](https://www.youtube.com/watch?v=ymSRTXT-iK4).*
 
 ## Lisenssi ja tekijät
 
