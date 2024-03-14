@@ -1,3 +1,9 @@
+/*
+ * This script adds a random `publishedAt` time to all Posts in the `posts.json` file.
+ * Some posts are also randomly given a `deletedAt` time that means the post has been deleted.
+ * You don't need to run this script, as the `posts.json` file has already been updated.
+ * For more information, see the /data/readme.md file in the root of the project.
+ */
 import { Post } from "../types";
 
 const posts = require('../../data/posts.json') as Post[];

@@ -30,7 +30,7 @@ Riippuvuudet sisältävät sekä [TypeScript-kielen](https://www.npmjs.com/packa
 
 ## Pääohjelman suorittaminen
 
-Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](./src/usersAndPosts.ts), joka tulostaa käyttäjiä ja postauksia. Tulosteet ovat alussa väärät ja esimerkiksi käyttäjien nimien jälkeen tulostuu aina samat otsikot. Tulosteet muuttuvat kuitenkin oikeiksi sitä mukaa, kun ratkot tehtävän osia.
+Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](./src/usersAndPosts.ts), joka tulostaa käyttäjiä ja postauksia. **Tulosteet ovat alussa väärät ja esimerkiksi käyttäjien nimien jälkeen tulostuu aina samat otsikot.** Tulosteet muuttuvat kuitenkin oikeiksi sitä mukaa, kun ratkot tehtävän osia.
 
 ```sh
 $ npm start                         # tapa 1
@@ -83,7 +83,7 @@ Tehtävän edelliseen versioon nähden `Post`-tietotyyppiin on tullut uudet attr
  }
 ```
 
-`User`-tietotyyppiin on lisäksi lisätty `registeredAt`-tieto.
+`User`-tietotyyppiin on lisäksi lisätty `registeredAt`-tieto:
 
 ```diff
  {
@@ -145,6 +145,7 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 > Product Manager<br/>
 > Lampaala Group<br/>
 > This email was written by ChatGPT
+
 
 ## Osa 1: `filterOutDeletedPosts` (10 % pisteistä)
 
@@ -210,6 +211,7 @@ sorting posts by publishedAt
 ```
 
 🚨 **Tämän harjoituksen tavoitteena on opetella itse toteuttamaan jokin tunnettu lajittelualgoritmi, joten JavaScriptin valmiin `Array.sort`-funktion käyttämistä ei sallita.** 🚨
+
 
 ### Yleisimmät lajittelualgoritmit
 

@@ -3,9 +3,13 @@ import { strict as assert } from 'node:assert';
 import { Post } from '../types';
 import { filterOutDeletedPosts } from '../filtering';
 
-
+/**
+ * This helper function creates a test post with a given `publishedAt` and `deletedAt` time.
+ * Other attributes are not relevant when testing the filtering function.
+ */
 function createTestPost(publishedAt: string, deletedAt?: string): Post {
-    // The functions under test are not allowed to modify the data
+    // The functions under test are not allowed to modify the data.
+    // Therefore, we use Object.freeze to make the object immutable.
     return Object.freeze({
         "id": Math.trunc(Math.random() * 10_000),
         "title": deletedAt ? "Deleted post" : "Active post",

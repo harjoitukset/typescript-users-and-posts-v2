@@ -36,7 +36,7 @@ export interface User {
 
 /**
  * Represents a user with associated posts.
- * This union type combines attributes from the 'User' class with a list of 'Post' objects.
+ * This union type combines attributes from the 'User' class with an array of 'Post' objects.
  * It is used to represent users along with their posts.
  */
 export type UserWithPosts = User & { posts: Post[] };
