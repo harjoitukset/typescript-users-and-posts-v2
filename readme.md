@@ -2,7 +2,9 @@
 
 Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään taulukkofunktioihin sekä lajittelualgoritmeihin. Tehtävä on jatkoa [Users & Posts](https://github.com/harjoitukset/typescript-users-and-posts) -tehtävälle.
 
-Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita sekä tehdä koodista testattavaa ja uudelleenkäytettävää.
+Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita sekä tehdä koodista testattavaa ja uudelleenkäytettävää. Koska tehtävän tavoitteena on rakentaa uudelleenkäytettävä ratkaisu, voit ratkaista tätä tehtävää halutessasi joko komentorivikäyttöliittymän tai REST-rajapinnan parissa.
+
+Hyödynnämme tässä tehtävässä erittäin suosittuja [Jest](https://jestjs.io/)- ja [Express](https://expressjs.com/)-työkaluja. Sinun ei kuitenkaan tarvitse tehdä muutoksia Jest- eikä Express-koodiin.
 
 
 ## GitHub classroom
@@ -17,6 +19,7 @@ Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta he
 
 💡 *Tehtävänannossa määritettyjen funktioiden nimien, parametrien tai paluuarvojen muuttaminen ei ole sallittua testien toimivuuden varmistamiseksi.*
 
+
 ## Riippuvuuksien asentaminen
 
 Aloita asentamalla projektin riippuvuudet, jotka on määritelty `package.json`-tiedostossa:
@@ -25,7 +28,14 @@ Aloita asentamalla projektin riippuvuudet, jotka on määritelty `package.json`-
 $ npm install
 ```
 
-Riippuvuudet sisältävät sekä [TypeScript-kielen](https://www.npmjs.com/package/typescript), [Jest-testaustyökalun](https://www.npmjs.com/package/jest) että [`ts-node`](https://www.npmjs.com/package/ts-node)- ja [`ts-jest`](https://www.npmjs.com/package/ts-jest)-paketit TypeScript-kielisen koodin ja testien suorittamiseksi Node.js:llä. Node.js sinulta tulee löytyä valmiina.
+Riippuvuudet sisältävät:
+
+* [TypeScript-kielen](https://www.npmjs.com/package/typescript)
+* [`ts-node`](https://www.npmjs.com/package/ts-node)-työkalun TypeScript-koodin suorittamiseksi Node.js:llä
+* [Jest-testaustyökalun](https://www.npmjs.com/package/jest) sekä [`ts-jest`](https://www.npmjs.com/package/ts-jest)-paketin TypeScript-kielisen koodin testaamiseksi.
+* [Express](https://www.npmjs.com/package/express)-web-sovelluskehyksen
+
+Node.js sinulta tulee löytyä valmiina. [Express.js:n versio 5 edellytää Node.js:n versiota 18 tai uudempaa](https://expressjs.com/en/starter/installing.html). Mikäli sinulla on vanhempi Node.js-versio, voit vaihtaa [package.json](./package.json)-tiedostoon Express- sekä @types/express-paketeille vanhemman version 4, joka tukee myös vanhempia Node.js-versioita.
 
 
 ## Pääohjelman suorittaminen
@@ -53,11 +63,28 @@ Ohjelman tuloste on muodoltaan esim. seuraava:
    2023-07-13T09:33:37.100Z
 ```
 
-Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika (suluissa nimen jälkeen). Postauksille on myös lisätty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika. Nämä ajat tulostuvat otsikon alapuolelle. Postauksille, jotka on poistettu, tulostuu siis kaksi aikaleimaa.
-
-Ohjelman kehitys on ottanut uusien ominaisuuksien vuoksi melkoisia harppauksia. Lisäksi vaatimukset **koodin yksikkötestauksen** sekä **uudelleenkäytettävyyden** osalta ovat selkeytyneet, joten ohjelma on pilkottu useisiin erillisiin funktioihin ja tiedostoihin. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti.
+Edellisestä tehtävästä poiketen käyttäjille on tallennettuna **rekisteröitymisaika** (suluissa nimen jälkeen). Postauksille on myös lisätty **luontiaika**, minkä lisäksi osalla postauksista on myös **poistamisaika**. Nämä ajat tulostuvat otsikon alapuolelle. Postauksille, jotka on poistettu, tulostuu siis kaksi aikaleimaa.
 
 💡 *Sinun ei tarvitse muuttaa `usersAndPosts.ts`-tiedostoa ratkaistessasi tätä tehtävää. Tiedoston muuttaminen esim. ohjelman toiminnan tutkimiseksi on kuitenkin halutessasi sallittua.*
+
+
+### Testit (Jest) ja REST-rajapinta (Express)
+
+Ohjelman kehitys on ottanut edellisen tehtävän jälkeen melkoisia harppauksia. Lisäksi vaatimukset **koodin yksikkötestauksen** sekä **uudelleenkäytettävyyden** osalta ovat lisääntyneet, joten ohjelma on pilkottu useisiin erillisiin funktioihin ja tiedostoihin. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti. Tehtävän edetessä sinun tulee suorittaa testejä, jotka on kirjoitettu [Jest-työkalulla](https://jestjs.io/):
+
+```
+npm test
+```
+
+Ohjelmassa on komentorivikäyttöliittymän lisäksi myös uusi REST-rajapinta, jota voit halutessasi käyttää ratkaisusi kokeilemisessa. Rajapinta on toteutettu [Express-kirjastolla](https://expressjs.com/) ja siihen liittyvät tiedostot löytyvät [/src/server/](./src/server/)-hakemistosta. Voit käynnistää palvelimen komennolla:
+
+```
+npm run server
+```
+
+Yksittäisen käyttäjän omat tiedot, sekä käyttäjään liittyvät postaukset, pitäisi löytyä käyttäjän id:n avulla esimerkiksi osoitteella [http://127.0.0.1:3000/api/v1/user/1](http://127.0.0.1:3000/api/v1/user/1). Kaikkien käyttäjien tiedot ja käyttäjäkohtaiset postaukset puolestaan pitäisi saada osoitteesta [http://127.0.0.1:3000/api/v1/user](http://127.0.0.1:3000/api/v1/user).
+
+Keskitymme tehtävän ohjeissa komentorivikäyttöliittymään. [/src/server/](./src/server/)-hakemiston tiedostot on pyritty kommentoimaan siten, että pärjäät niiden kanssa itsenäisesti.
 
 
 ## Tehtävän data
@@ -115,13 +142,13 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 >
 > * Task 1: *filterOutDeletedPosts*
 >
->   The first task is to implement the [*filterOutDeletedPosts* function](./src/filtering.ts). We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
+>   Your first task is to implement a [*filterOutDeletedPosts* function](./src/filtering.ts). We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
 >
 > * Task 2: *mapPostsToUsers*
 >
->   The second task involves creating a [*mapPostsToUsers* function](./src/mapping.ts). The previous implementation relied heavily on nested logic and *console.log* statements, making it incredibly challenging for our testers to conduct unit tests and for other teams to use the code.
+>   The second task involves creating a [*mapPostsToUsers* function](./src/mapping.ts). The previous implementation relied heavily on nested logic and *console.log* statements, making it incredibly challenging for our testers to conduct unit tests and for other teams to reuse the code.
 >
->   This function will be instrumental in associating posts with users.
+>   This function will be instrumental in associating posts with users both on the command line and in our brand new REST api.
 >
 > * Task 3: *sortPostsByPublishedDate*
 >
@@ -129,11 +156,12 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 >
 > * Task 4: *sortUsersByRegistrationDate*
 >
->   Finally, we need to implement a [*sortUsersByRegistrationDate* function](./src/sorting.ts). This function should sort users by their *registeredAt* date, accommodating different data types (integer and string) for this attribute. Storing strings and intergers in the same field is a small piece of technical debt that we just need to accept for now.
+>   Finally, we need to implement a [*sortUsersByRegistrationDate* function](./src/sorting.ts). This function should sort users by their *registeredAt* date, accommodating different data types (integer and string) for this attribute. Storing strings and intergers in the same field is a small piece of [technical debt](https://en.wikipedia.org/wiki/Technical_debt) that we just need to live with for now.
 >
-> The urgency of these tasks cannot be overstated. The previous versions relied too heavily on nested logic and *console.log* statements, making it exceptionally difficult for our testers to conduct unit tests and for the mobile and web teams to reuse the code.
 >
-> On a lighter note, I wanted to share some exciting news. I've already made a pre-order on a Tesla, and my bonus from this quarter is playing a significant role in making that dream a reality. So, you can understand the importance of these tasks!
+> The urgency of these tasks cannot be overstated. The previous versions relied too heavily on nested logic and *console.log* statements, making it exceptionally difficult for our testers to conduct unit tests and for the mobile and web teams to reuse the code in the REST api.
+>
+> On a lighter note, I wanted to share some exciting news. I've already made a pre-order on a Tesla 🚗, and my bonus from this quarter is playing a significant role in making that dream a reality💰. So, you can understand the importance of these tasks!!!!1!!
 >
 > Your job and my quarterly bonus are at stake if we don't address these issues promptly and effectively. I have complete confidence in your abilities, and I know you can rise to this challenge. Please prioritize these tasks and reach out if you need any guidance or assistance along the way.
 >
@@ -143,17 +171,17 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 >
 > Maxwell Goldgrabber<br/>
 > Product Manager<br/>
-> Lampaala Group<br/>
-> This email was written by ChatGPT
+> ContentMonger Inc.<br/>
+> This email was written with help from ChatGPT
 
 
 ## Osa 1: `filterOutDeletedPosts` (10 % pisteistä)
 
-Toteuta funktio `filterOutDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset Post-objektit, joilla on asetettuna `deletedAt`-arvo.
+Toteuta funktio `filterOutDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset [Post-objektit](./src/types.ts), joilla on asetettuna `deletedAt`-arvo.
 
 Lue lisää filter-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 
-Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
+Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/filtering.test.ts), jotka voit suorittaa seuraavalla komennolla:
 
 ```
 $ npm test src/tests/filtering.test.ts
@@ -165,13 +193,16 @@ filtering posts
   ✓ the function does not modify the original array
 ```
 
+Vaihtoehtoisesti voit myös suorittaa komentorivikäyttöliittymän (`npm start`) ja tarkastaa manuaalisesti, ettei listauksessa millään postauksella ole luontiajan lisäksi poistoaikaa. Kolmas vaihtoehto on käyttää REST-rajapintaa (`npm run server` ja `http://localhost:3000/api/v1/user`) ja varmistaa, että tuloksessa ei ole sellaisia postauksia, joilla on `deletedAt`-arvo.
+
+
 ## Osa 2: `mapPostsToUsers` (20 % pisteistä)
 
 Tiedostossa [src/mapping.ts](./src/mapping.ts) on pohja funktiolle, joka ottaa parametreinaan taulukot `User`- sekä `Post`-objekteista. Tehtävänäsi on jatkokehittää tätä funktiota siten, että se lisää käyttäjille taulukon hänen omista `Post`-objekteistaan. Tuloksena funktio palauttaa `UserWithPosts`-taulukon. `UserWithPosts` on määritetty [src/types.ts](./src/types.ts)-tiedostossa.
 
 Lue lisää map-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 
-Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
+Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/mapping.test.ts), jotka voit suorittaa seuraavalla komennolla:
 
 ```
 $ npm test src/tests/mapping.test.ts
@@ -181,6 +212,9 @@ mapUsersWithPosts
   ✓ function does not modify given users
   ✓ empty input arrays are handled without errors
 ```
+
+Edellisessä osassa esitellyt vaihtoehdot komentirivikäyttöliittymän ja REST-rajapinnan käytöstä soveltuvat myös tähän ja tehtävän myöhempiin osiin.
+
 
 ## Osa 3: `sortPostsByPublishedDate` (40 % pisteistä)
 
@@ -197,7 +231,7 @@ Toteuta lajittelulogiikkasi tähän funktioon siten, että funktio palauttaa uud
 
 Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi poimia aineistosta esimerkiksi pelkkiä otsikoita ja julkaisuaikoja. Et saa myöskään muuttaa annettuja taulukkoa tai sillä olevia objekteja.
 
-Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
+Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/sorting-posts.test.ts), jotka voit suorittaa seuraavalla komennolla:
 
 ```
 $ npm test src/tests/sorting-posts.test.ts
@@ -210,7 +244,7 @@ sorting posts by publishedAt
   ✓ sorting posts must not utilize Array.sort
 ```
 
-🚨 **Tämän harjoituksen tavoitteena on opetella itse toteuttamaan jokin tunnettu lajittelualgoritmi, joten JavaScriptin valmiin `Array.sort`-funktion käyttämistä ei sallita.** 🚨
+👮‍♀️🚨 **Tämän harjoituksen tavoitteena on opetella itse toteuttamaan jokin tunnettu lajittelualgoritmi, joten JavaScriptin valmiin `Array.sort`-funktion käyttämistä ei sallita.** 🚨👮
 
 
 ### Yleisimmät lajittelualgoritmit
