@@ -34,6 +34,7 @@ Riippuvuudet sisältävät:
 * [`ts-node`](https://www.npmjs.com/package/ts-node)-työkalun TypeScript-koodin suorittamiseksi Node.js:llä
 * [Jest-testaustyökalun](https://www.npmjs.com/package/jest) sekä [`ts-jest`](https://www.npmjs.com/package/ts-jest)-paketin TypeScript-kielisen koodin testaamiseksi.
 * [Express](https://www.npmjs.com/package/express)-web-sovelluskehyksen
+* [Supertest](https://www.npmjs.com/package/supertest)-paketin Express-sovelluksen testaamiseksi
 
 Node.js sinulta tulee löytyä valmiina. [Express.js:n versio 5 edellytää Node.js:n versiota 18 tai uudempaa](https://expressjs.com/en/starter/installing.html). Mikäli sinulla on vanhempi Node.js-versio, voit vaihtaa [package.json](./package.json)-tiedostoon Express- sekä @types/express-paketeille vanhemman version 4, joka tukee myös vanhempia Node.js-versioita.
 
@@ -378,6 +379,10 @@ Jest is licensed under the MIT license. See [LICENSE](https://github.com/faceboo
 ## Express
 
 Express is licensed under the MIT license. See [LICENSE](https://github.com/expressjs/express/blob/master/LICENSE) for the full license text.
+
+## Supertest
+
+Supertest is licensed under the MIT license. See [LICENSE](https://github.com/ladjs/supertest/blob/master/LICENSE) for the full license text.
 
 ## DummyJSON
 

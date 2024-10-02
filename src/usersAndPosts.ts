@@ -1,3 +1,9 @@
+/*
+ * You do not need to modify this file. You can run it with `npm start` and see the output in the console.
+ * Initially, the output is not sorted or filtered. Your task is to implement the functions in the other files.
+ * See the readme.md for more information.
+ */
+
 import { filterOutDeletedPosts } from "./filtering";
 import { mapPostsToUsers } from "./mapping";
 import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting";
