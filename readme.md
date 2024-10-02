@@ -298,30 +298,35 @@ Tässä tehtävässä harjoittelemme algoritmin toteutusta, joten kirjoitamme la
 
 Tehtävän viimeinen osa on toinen lajittelu, jossa lajiteltavan aineiston vaihtelevat tietotyypit edellyttävät hieman soveltamista:
 
-> As part of our ongoing improvements to our platform, we've encountered a unique challenge with the `registeredAt` attribute in our user records. The `registeredAt` attribute stores the registration date for each user. However, we've noticed that different users have different data types for this attribute. **Users who registered through our mobile app have [an integer value representing the epoch timestamp (in seconds)](https://en.wikipedia.org/wiki/Unix_time), while users who registered through the web app have [a date string in ISO format](https://en.wikipedia.org/wiki/ISO_8601)**. It's crucial that we sort all users in ascending order by their registration date, regardless of the data type inconsistency.
+> Subject: RE: RE: RE: RE: RE: RE: Users and posts
 >
-> In this case, you are allowed to utilize the pre-existing `sort` method. However, I encourage you to reuse the sorting logic that you previously used when sorting posts.
+> As part of our ongoing improvements to our platform, we've encountered a unique challenge with the `registeredAt` attribute in our user records. The `registeredAt` attribute stores the registration date for each user. However, we've noticed that different users have different data types for this attribute. **Users who registered through our mobile app have [an integer value representing the epoch timestamp (in seconds)](https://en.wikipedia.org/wiki/Unix_time), while users who registered through the web app have [a date string in ISO format](https://en.wikipedia.org/wiki/ISO_8601)**. It's crucial that we sort all users in ascending order by their registration date, regardless of the data type inconsistency. As I mentioned earlier, this is the type of [technical debt](https://en.wikipedia.org/wiki/Technical_debt) that we appear to have.
+>
+> In this case, you are allowed to utilize the pre-existing [`Array.sort` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). However, I encourage you to reuse the sorting logic that you previously used when sorting posts.
 >
 > Thank you for your dedication to our project, and I look forward to seeing your solution in action.
 >
 > Maxwell Goldgrabber<br/>
 > This email was written by ChatGPT
 >
-> P.S. Here are examples of the different types of `registeredAt` values for users:
+> P.S. Here are examples of the different types of `registeredAt` values for users, that can be found in the [users.json](./data/users.json):
 >
 > 1. **Epoch Timestamp (Integer)**:
->    - User 1: Registered at 1632218400 (Represents September 21, 2021, at 12:00:00 UTC)
->    - User 2: Registered at 1663754400 (Represents February 19, 2023, at 12:00:00 UTC)
+>    - User id 2: Registered at 1638589047 (4 December 2021 05:37:27 GMT+02:00)
+>    - User id 3: Registered at 1632809198 (28 September 2021 09:06:38 GMT+03:00 DST)
 >
 > 2. **ISO Format (String)**:
->    - User 3: Registered at "2022-08-15T18:30:00Z" (Represents August 15, 2022, at 18:30:00 UTC)
->    - User 4: Registered at "2023-04-10T09:45:00Z" (Represents April 10, 2023, at 09:45:00 UTC)
+>    - User id 1: Registered at "2022-07-16T22:57:59.361Z" (17 July 2022 01:57:59 EEST)
+>    - User id 4: Registered at "2021-10-12T04:57:33.720Z" (12 October 2021 07:57:33 EEST)
 >
 > These examples demonstrate the variation in the `registeredAt` attribute's data types, with some users having integer values (epoch timestamps) and others having string values (in ISO 8601 format). It's essential that your implementation handles the different data types (integer and string) for the *registeredAt* attribute **without modifying the user records**.
 
-Käyttäjiä vertaillessasi siis sinun tulee siis huomioida, että niiden rekisteröitymisaika saattaa olla tallennettuna kahdella eri tavalla. Tässä voi olla hyödyksi toteuttaa erillinen apufunktio, joka palauttaa käyttäjästä riippumatta rekisteröitymisajan aina samassa muodossa. Lisäksi saatat hyötyä [`typeof`-operaattorista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), [Date-luokasta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) tai mahdollisesti [StackOverflow-keskusteluista](https://stackoverflow.com/questions/4631928/convert-utc-epoch-to-local-date). Tässä osassa saat käyttää [JavaScriptin valmista sort-metodia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
 
-Ratkaisullesi on kirjoitettu valmiit testit, jotka voit ajaa seuraavalla komennolla:
+Käyttäjiä vertaillessasi siis sinun tulee siis huomioida, että niiden **rekisteröitymisaika saattaa olla tallennettuna kahdella eri tavalla**. Tässä voi olla hyödyksi toteuttaa erillinen apufunktio, joka palauttaa käyttäjästä riippumatta rekisteröitymisajan aina samassa muodossa.
+
+Lisäksi saatat hyötyä [`typeof`-operaattorista](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof), [Date-luokasta](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) tai mahdollisesti [StackOverflow-keskusteluista](https://stackoverflow.com/questions/4631928/convert-utc-epoch-to-local-date). Tässä osassa saat käyttää [JavaScriptin valmista sort-metodia](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort).
+
+Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/sorting-users.test.ts), jotka voit ajaa seuraavalla komennolla:
 
 ```
 $ npm test src/tests/sorting-users.test.ts
@@ -338,13 +343,46 @@ sorting users by registration date
 
 🚀 *Vaikka saat käyttää valmista sort-metodia, edellisessä osassa toteuttamasi lajittelualgoritmin jatkokehittäminen ["geneeriseksi"](https://www.typescriptlang.org/docs/handbook/2/generics.html) voi olla opettavainen kokemus. Geneerisistä tyypeistä löydät lisätietoa esim. videolta [TypeScript Generics are EASY once you know this (ByteGrad)](https://www.youtube.com/watch?v=ymSRTXT-iK4).*
 
-## Lisenssi ja tekijät
+# Lisenssit ja tekijänoikeudet
 
-Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+## Node.js
 
-Tehtävänannon, käsiteltävien tiedostojen sekä lähdekoodien toteutuksessa on hyödynnetty ChatGPT 3.5:ttä.
+> _"Node.js is available under the [MIT license](https://opensource.org/licenses/MIT). Node.js also includes external libraries that are available under a variety of licenses. See [LICENSE](https://github.com/nodejs/node/blob/HEAD/LICENSE) for the full license text."_
+>
+> https://github.com/nodejs/node#license
 
+## TypeScript
+
+TypeScript itsessään on lisensoitu Apache-2.0 -lisenssillä: https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt
+
+## Ts-node
+
+> _ts-node is licensed under the MIT license. [MIT](https://github.com/TypeStrong/ts-node/blob/main/LICENSE)_
+>
+> _ts-node includes source code from Node.js which is licensed under the MIT license. [Node.js license information](https://raw.githubusercontent.com/nodejs/node/master/LICENSE)_
+>
+> _ts-node includes source code from the TypeScript compiler which is licensed under the Apache License 2.0. [TypeScript license information](https://github.com/microsoft/TypeScript/blob/master/LICENSE.txt)_
+>
+> https://github.com/TypeStrong/ts-node/#license
+
+## Jest
+
+Jest is licensed under the MIT license. See [LICENSE](https://github.com/facebook/jest/blob/main/LICENSE) for the full license text.
+
+## ts-jest
+
+> _"This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/kulshekhar/ts-jest/blob/main/LICENSE.md) file for details"_
+>
+> https://github.com/kulshekhar/ts-jest/#license
+
+## Express
+
+Express is licensed under the MIT license. See [LICENSE](https://github.com/expressjs/express/blob/master/LICENSE) for the full license text.
 
 ## DummyJSON
 
 Tehtävässä hyödynnetyn [DummyJSON](https://github.com/Ovi/DummyJSON/)-palvelun on kehittänyt [Muhammad Ovi (Owais)](https://github.com/Ovi/) ja se on lisensoitu MIT-lisenssillä: [https://github.com/Ovi/DummyJSON/blob/master/LICENCE](https://github.com/Ovi/DummyJSON/blob/master/LICENCE).
+
+## Tämä tehtävä
+
+Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/). Tehtävänannon, lähdekoodien ja testien toteutuksessa on hyödynnetty ChatGPT-kielimallia sekä GitHub copilot -tekoälyavustinta.
