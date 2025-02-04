@@ -2,9 +2,9 @@
 
 Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään taulukkofunktioihin sekä lajittelualgoritmeihin. Tehtävä on jatkoa [Users & Posts](https://github.com/harjoitukset/typescript-users-and-posts) -tehtävälle.
 
-Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita sekä tehdä koodista testattavaa ja uudelleenkäytettävää. Koska tehtävän tavoitteena on rakentaa uudelleenkäytettävä ratkaisu, voit ratkaista tätä tehtävää halutessasi joko komentorivikäyttöliittymän tai REST-rajapinnan parissa.
+Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita sekä tehdä koodista testattavaa ja uudelleenkäytettävää. Koska tehtävän tavoitteena on rakentaa uudelleenkäytettävä ratkaisu, voit ratkaista tätä tehtävää halutessasi joko komentorivikäyttöliittymän tai **repositorioon valmiiksi toteutetun REST-rajapinnan parissa**.
 
-Hyödynnämme tässä tehtävässä erittäin suosittuja [Jest](https://jestjs.io/)- ja [Express](https://expressjs.com/)-työkaluja. Sinun ei kuitenkaan tarvitse tehdä muutoksia Jest- eikä Express-koodiin.
+ 💡*Hyödynnämme tässä tehtävässä erittäin suosittuja [Jest](https://jestjs.io/)- ja [Express](https://expressjs.com/)-työkaluja. Sinun ei kuitenkaan tarvitse tehdä muutoksia Jest- eikä Express-koodiin.*
 
 
 ## GitHub classroom
@@ -17,7 +17,7 @@ Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta he
 
 💡 *Saat kirjoittaa halutessasi lisää testejä, mutta älä muuta tai poista valmiiksi kirjoitettuja testejä.*
 
-💡 *Tehtävänannossa määritettyjen funktioiden nimien, parametrien tai paluuarvojen muuttaminen ei ole sallittua testien toimivuuden varmistamiseksi.*
+💡 *Testien toimivuuden varmistamiseksi tehtävänannossa määritettyjen funktioiden nimien, parametrien tai paluuarvojen muuttaminen ei ole sallittua.*
 
 
 ## Riippuvuuksien asentaminen
@@ -386,7 +386,7 @@ Supertest is licensed under the MIT license. See [LICENSE](https://github.com/la
 
 ## DummyJSON
 
-Tehtävässä hyödynnetyn [DummyJSON](https://github.com/Ovi/DummyJSON/)-palvelun on kehittänyt [Muhammad Ovi (Owais)](https://github.com/Ovi/) ja se on lisensoitu MIT-lisenssillä: [https://github.com/Ovi/DummyJSON/blob/master/LICENCE](https://github.com/Ovi/DummyJSON/blob/master/LICENCE).
+Tehtävässä hyödynnetyn [DummyJSON](https://github.com/Ovi/DummyJSON/)-palvelun on kehittänyt [Muhammad Ovi (Owais)](https://github.com/Ovi/) ja se on lisensoitu MIT-lisenssillä: [https://github.com/Ovi/DummyJSON/blob/master/LICENSE](https://github.com/Ovi/DummyJSON/blob/master/LICENSE).
 
 ## Tämä tehtävä
 
