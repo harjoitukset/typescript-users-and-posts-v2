@@ -1,7 +1,6 @@
-import { test, describe, jest, afterEach } from '@jest/globals';
-import { strict as assert } from 'node:assert';
-import { Post } from '../types';
+import { afterEach, describe, expect, test, vitest } from 'vitest';
 import { sortPostsByPublishedDate } from '../sorting';
+import { Post } from '../types';
 
 
 describe('sorting posts by publishedAt', () => {
@@ -12,32 +11,33 @@ describe('sorting posts by publishedAt', () => {
     const unordered = [third, first, second];
 
     afterEach(() => {
-        jest.resetAllMocks(); // reset mocks to restore original behaviour of Array.sort
+        // reset mocks to restore original behaviour of Array.sort
+        vitest.resetAllMocks();
     });
 
     test('post are returned in correct order', () => {
         let sorted = sortPostsByPublishedDate(unordered);
 
-        assert.deepEqual(sorted, [first, second, third]);
+        expect(sorted).toEqual([first, second, third]);
     });
 
     test('sorting handles posts with identical dates correctly', () => {
         let samePostsTwice = [...unordered, ...unordered];
         let sorted = sortPostsByPublishedDate(samePostsTwice);
 
-        assert.deepEqual(sorted, [first, first, second, second, third, third]);
+        expect(sorted).toEqual([first, first, second, second, third, third]);
     });
 
     test('sorting an empty array should not throw exceptions', () => {
         let sorted = sortPostsByPublishedDate([]);
 
-        assert.deepEqual(sorted, []);
+        expect(sorted).toEqual([]);
     });
 
     test('sorting should not modify the original array', () => {
         sortPostsByPublishedDate(unordered);
 
-        assert.deepEqual(unordered, [third, first, second]);
+        expect(unordered).toEqual([third, first, second]);
     });
 
     test('sorting posts must not utilize Array.sort', () => {
@@ -47,10 +47,12 @@ describe('sorting posts by publishedAt', () => {
         };
 
         // if Array.sort is called inside the function, an error will be thrown
-        jest.spyOn(Array.prototype, 'sort').mockImplementation(notAllowed);
+        const mock = vitest.spyOn(Array.prototype, 'sort').mockImplementation(notAllowed);
 
+        // will throw an error if Array.sort is used inside the function
         sortPostsByPublishedDate(unordered);
 
-        assert.ok(true, 'Array.sort was not called');
+        // if Array.sort was not called, the test will pass
+        expect(mock).toHaveBeenCalledTimes(0);
     });
 });

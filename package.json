@@ -1,21 +1,26 @@
 {
+  "name": "typescript-users-and-posts-v2",
+  "version": "1.0.0",
+  "description": "TypeScript exercise with reusable code and an Express server",
   "scripts": {
-    "start": "ts-node src/usersAndPosts.ts",
-    "server": "ts-node src/server/index.ts",
-    "test": "jest --verbose"
+    "start": "tsx src/usersAndPosts.ts",
+    "server": "tsx src/server/index.ts",
+    "test": "vitest run"
   },
   "devDependencies": {
-    "@jest/globals": "29",
     "@types/express": "5",
-    "@types/node": "20",
+    "@types/node": "22",
     "@types/supertest": "6",
-    "jest": "29",
     "supertest": "7",
-    "ts-jest": "29",
-    "ts-node": "10",
-    "typescript": "5"
+    "tsx": "^4",
+    "typescript": "^5",
+    "vitest": "^4"
   },
   "dependencies": {
     "express": "5"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
   }
 }

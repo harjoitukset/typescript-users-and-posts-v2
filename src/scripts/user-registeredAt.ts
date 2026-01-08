@@ -3,7 +3,7 @@
  * You don't need to run this script, as the `users.json` file has already been updated.
  * For more information, see the /data/readme.md file in the root of the project.
  */
-import { User } from "../types";
+import { User } from "../types.js";
 
 const users = require('../../data/users.json') as User[];
 const YEAR_IN_MILLISECONDS = 365 * 24 * 60 * 60 * 1_000;

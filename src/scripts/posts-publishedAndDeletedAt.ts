@@ -4,7 +4,7 @@
  * You don't need to run this script, as the `posts.json` file has already been updated.
  * For more information, see the /data/readme.md file in the root of the project.
  */
-import { Post } from "../types";
+import { Post } from "../types.js";
 
 const posts = require('../../data/posts.json') as Post[];
 

@@ -1,8 +1,7 @@
-import request from 'supertest';
-import { router } from './routes';
 import express from 'express';
-import { describe, test } from '@jest/globals';
-import { strict as assert } from 'node:assert';
+import request from 'supertest';
+import { describe, expect, test } from 'vitest';
+import { router } from './routes';
 
 // Set up Express app for testing. This does not start the server or listen on any port.
 const app = express();
@@ -21,29 +20,29 @@ describe('API Tests', () => {
     test('/api/v1/user returns an array of users', async () => {
         const response = await request(app).get('/api/v1/user');
 
-        assert.equal(response.status, 200);
-        assert.equal(response.headers['content-type'], 'application/json; charset=utf-8');
-        assert.ok(Array.isArray(response.body));
+        expect(response.status).toBe(200);
+        expect(response.headers['content-type']).toBe('application/json; charset=utf-8');
+        expect(Array.isArray(response.body)).toBe(true);
     });
 
 
     test('/api/v1/user/2 returns a single user with posts', async () => {
         const response = await request(app).get('/api/v1/user/2');
 
-        assert.equal(response.status, 200);
-        assert.equal(response.headers['content-type'], 'application/json; charset=utf-8');
+        expect(response.status).toBe(200);
+        expect(response.headers['content-type']).toBe('application/json; charset=utf-8');
 
-        assert.ok('username' in response.body);
-        assert.equal(typeof response.body.username, 'string');
+        expect(response.body).toHaveProperty('username');
+        expect(typeof response.body.username).toBe('string');
 
-        assert.ok('posts' in response.body);
-        assert.ok(Array.isArray(response.body.posts));
+        expect(response.body).toHaveProperty('posts');
+        expect(Array.isArray(response.body.posts)).toBe(true);
     });
 
     test('/api/v1/user/1234567890 returns a "not found" response', async () => {
         const response = await request(app).get('/api/v1/user/1234567890');
 
-        assert.equal(response.status, 404);
-        assert.equal(response.headers['content-type'], 'application/json; charset=utf-8');
+        expect(response.status).toBe(404);
+        expect(response.headers['content-type']).toBe('application/json; charset=utf-8');
     });
 });

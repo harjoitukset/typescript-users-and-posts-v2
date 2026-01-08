@@ -1,7 +1,6 @@
-import { test, describe } from '@jest/globals';
-import { strict as assert } from 'node:assert';
-import { Post, User } from '../types';
+import { describe, expect, test } from 'vitest';
 import { mapPostsToUsers } from '../mapping';
+import { Post, User } from '../types';
 
 
 
@@ -22,20 +21,21 @@ describe('mapUsersWithPosts', () => {
 
         const usersWithPosts = mapPostsToUsers(users, posts);
 
-        assert.equal(usersWithPosts.length, 3, 'All 3 users should be returned');
-        assert.equal(usersWithPosts[0].posts.length, 2, 'User 1 should have 2 posts');
-        assert.equal(usersWithPosts[1].posts.length, 1, 'User 2 should have 1 post');
-        assert.equal(usersWithPosts[2].posts.length, 0, 'User 3 should have no post');
+        expect(usersWithPosts.length).toBe(3);
+        expect(usersWithPosts[0].posts.length).toBe(2);
+        expect(usersWithPosts[1].posts.length).toBe(1);
+        expect(usersWithPosts[2].posts.length).toBe(0);
 
-        assert.equal(usersWithPosts[0].posts[0].title, 'Post 1 by user 1');
-        assert.equal(usersWithPosts[0].posts[1].title, 'Post 2 by user 1');
-        assert.equal(usersWithPosts[1].posts[0].title, 'Post 3 by user 2');
+        expect(usersWithPosts[0].posts[0].title).toBe('Post 1 by user 1');
+        expect(usersWithPosts[0].posts[1].title).toBe('Post 2 by user 1');
+        expect(usersWithPosts[1].posts[0].title).toBe('Post 3 by user 2');
     });
 
     test('function does not modify given users', () => {
         const usersWithPosts = mapPostsToUsers(users, posts);
 
-        assert.ok(!('posts' in users[0]), 'Posts array must not be added to the actual User');
+        // the original users should not have a 'posts' property
+        expect(users[0]).not.toHaveProperty('posts');
     });
 
     test('empty input arrays are handled without errors', () => {
@@ -44,6 +44,6 @@ describe('mapUsersWithPosts', () => {
 
         const usersWithPosts = mapPostsToUsers(users, posts);
 
-        assert.equal(usersWithPosts.length, 0);
+        expect(usersWithPosts.length).toBe(0);
     });
 });

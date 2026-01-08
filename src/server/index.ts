@@ -5,7 +5,7 @@
  */
 
 import express from 'express';
-import { router } from './routes';
+import { router } from './routes.js';
 
 // If you want, you can define the port in an environment variable.
 const PORT = process.env.PORT || 3000;

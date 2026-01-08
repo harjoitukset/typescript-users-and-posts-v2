@@ -4,10 +4,10 @@
  * See the readme.md for more information.
  */
 
-import { filterOutDeletedPosts } from "./filtering";
-import { mapPostsToUsers } from "./mapping";
-import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting";
-import { Post, User, UserWithPosts } from "./types";
+import { filterOutDeletedPosts } from "./filtering.js";
+import { mapPostsToUsers } from "./mapping.js";
+import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.js";
+import { Post, User, UserWithPosts } from "./types.js";
 
 /**
  * Reads posts from the `posts.json` file and returns them as an array.

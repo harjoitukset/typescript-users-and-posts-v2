@@ -1,4 +1,4 @@
-import { Post, User } from "./types";
+import { Post, User } from "./types.js";
 
 /**
  * Sorts an array of posts in ascending order based on the 'publishedAt' date. The

@@ -1,4 +1,4 @@
-import { Post, User, UserWithPosts } from "./types";
+import { type Post, type User, type UserWithPosts } from "./types.js";
 
 /**
  * Maps posts to users and creates UserWithPosts objects.
