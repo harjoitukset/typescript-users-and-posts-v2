@@ -5,10 +5,9 @@
  */
 
 import { Request, Response, Router } from 'express';
-import { filterOutDeletedPosts } from '../filtering.js';
+import { getPosts, getUsers } from '../files.js';
 import { mapPostsToUsers } from '../mapping.js';
-import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from '../sorting.js';
-import { Post, User, UserWithPosts } from '../types.js';
+import { type Post, type User, type UserWithPosts } from '../types.js';
 
 
 /**
@@ -56,31 +55,3 @@ router.get('/api/v1/user/:id', async (req: Request, res: Response) => {
 
     res.json(userWithPosts);
 });
-
-
-
-/**
- * This function reads the posts from the `posts.json` file and returns them as an array.
- * Unlike the function in usersAndPosts.ts, this function returns a Promise that resolves
- * to an array of posts. The posts are sorted from oldest to newest and deleted posts are excluded.
- *
- * Returning a promise makes the function asynchronous, which makes it appear more like a real-world
- * scenario where data is fetched from a database or an external API.
- */
-async function getPosts(): Promise<Post[]> {
-    let posts = require('../../data/posts.json') as Post[];
-    posts = filterOutDeletedPosts(posts);
-    posts = sortPostsByPublishedDate(posts);
-    return posts;
-}
-
-
-/**
- * This function reads the users from the `users.json` file and returns them as an array.
- * See the getPosts function above for an explanation of why this function returns a Promise.
- */
-async function getUsers(): Promise<User[]> {
-    let users = require('../../data/users.json') as User[];
-    users = sortUsersByRegistrationDate(users);
-    return users;
-}

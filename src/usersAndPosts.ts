@@ -3,40 +3,9 @@
  * Initially, the output is not sorted or filtered. Your task is to implement the functions in the other files.
  * See the readme.md for more information.
  */
-
-import { readFile } from "fs/promises";
-import { filterOutDeletedPosts } from "./filtering.js";
+import { getPosts, getUsers } from "./files.js";
 import { mapPostsToUsers } from "./mapping.js";
-import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.js";
-import { Post, User, UserWithPosts } from "./types.js";
-
-/**
- * Reads posts from the `posts.json` file and returns them as an array.
- * The posts are sorted from oldest to newest and deleted posts are excluded.
- */
-async function getPosts(): Promise<Post[]> {
-
-    const postsFile = new URL('../data/posts.json', import.meta.url);
-    const posts: Post[] = JSON.parse(await readFile(postsFile, 'utf8'));
-
-    // exclude posts that are marked as deleted:
-    const activePosts = filterOutDeletedPosts(posts);
-
-    // active posts are sorted from oldest to newest:
-    return sortPostsByPublishedDate(activePosts);
-}
-
-/**
- * Reads users from the `users.json` file and returns them as an array.
- * The users are sorted from oldest to newest by registration date.
- */
-async function getUsers(): Promise<User[]> {
-    const usersFile = new URL('../data/users.json', import.meta.url);
-    const users: User[] = JSON.parse(await readFile(usersFile, 'utf8'));
-
-    // users are sorted in ascending order by registration date
-    return sortUsersByRegistrationDate(users);
-}
+import { type Post, type User, type UserWithPosts } from "./types.js";
 
 
 /**
