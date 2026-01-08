@@ -46,13 +46,14 @@ describe('sorting posts by publishedAt', () => {
             throw new Error('Using Array.sort is not allowed in the exercise!');
         };
 
-        // if Array.sort is called inside the function, an error will be thrown
-        const mock = vitest.spyOn(Array.prototype, 'sort').mockImplementation(notAllowed);
+        const sort = vitest.spyOn(Array.prototype, 'sort').mockImplementation(notAllowed);
+        const toSorted = vitest.spyOn(Array.prototype, 'toSorted').mockImplementation(notAllowed);
 
-        // will throw an error if Array.sort is used inside the function
+        // will throw an error if the sorting methods are used inside the function
         sortPostsByPublishedDate(unordered);
 
-        // if Array.sort was not called, the test will pass
-        expect(mock).toHaveBeenCalledTimes(0);
+        // if Array.sort and Array.toSorted were not called, the test will pass
+        expect(sort).toHaveBeenCalledTimes(0);
+        expect(toSorted).toHaveBeenCalledTimes(0);
     });
 });
