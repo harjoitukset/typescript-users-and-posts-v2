@@ -4,14 +4,14 @@ Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään taulukkofu
 
 Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita sekä tehdä koodista testattavaa ja uudelleenkäytettävää. Koska tehtävän tavoitteena on rakentaa uudelleenkäytettävä ratkaisu, voit ratkaista tätä tehtävää halutessasi joko komentorivikäyttöliittymän tai **repositorioon valmiiksi toteutetun REST-rajapinnan parissa**.
 
- 💡*Hyödynnämme tässä tehtävässä erittäin suosittuja [Jest](https://jestjs.io/)- ja [Express](https://expressjs.com/)-työkaluja. Sinun ei kuitenkaan tarvitse tehdä muutoksia Jest- eikä Express-koodiin.*
+ 💡*Hyödynnämme tässä tehtävässä suosittuja [Vitest](https://vitest.dev/)- ja [Express](https://expressjs.com/)-työkaluja. Sinun ei kuitenkaan tarvitse tehdä muutoksia Vitest- eikä Express-koodiin.*
 
 
 ## GitHub classroom
 
 Tehtävä arvostellaan käyttäen [GitHub classroom](https://classroom.github.com/) -palvelua, joka suorittaa ohjelmasi ja tarkastaa sekä pisteyttää tulokset automaattisesti. Voit tarvittaessa lähettää tehtävän tarkastettavaksi monta kertaa. Tee tällöin uusi commit ja vie (push) muutokset GitHubiin. Varmista kuitenkin, että viimeisin tekemäsi commit tuottaa parhaat pisteet.
 
-Tehtävät tarkastetaan automaattisesti [Jest-yksikkötesteillä](./src/tests/). Testeihin perehtyminen ei ole tehtävän suorittamiseksi välttämätöntä, mutta testit voivat auttaa hahmottamaan miten oman koodisi tulee toimia.
+Tehtävät tarkastetaan automaattisesti [Vitest-yksikkötesteillä](./src/tests/). Testeihin perehtyminen ei ole tehtävän suorittamiseksi välttämätöntä, mutta testit voivat auttaa hahmottamaan miten oman koodisi tulee toimia.
 
 Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta henkilökohtaisen kopion, kloonaa se itsellesi `git clone` -komennolla. **Varmista, että Git-osoitteen lopussa on oma GitHub-käyttäjänimesi**. Jos käyttäjänimesi puuttuu osoitteesta, kyseessä ei ole henkilökohtainen kopiosi tehtävästä. Luo tässä tapauksessa oma classroom-kopio tehtävästä itsellesi Teams-tehtävästä löytyvän linkin avulla.
 
@@ -22,7 +22,7 @@ Kun olet hyväksynyt tehtävän GitHub classroomissa ja saanut repositoriosta he
 
 ## Riippuvuuksien asentaminen
 
-Aloita asentamalla projektin riippuvuudet, jotka on määritelty `package.json`-tiedostossa:
+Aloita asentamalla projektin riippuvuudet, jotka on määritelty [`package.json`-tiedostossa](./package.json):
 
 ```sh
 $ npm install
@@ -31,12 +31,12 @@ $ npm install
 Riippuvuudet sisältävät:
 
 * [TypeScript-kielen](https://www.npmjs.com/package/typescript)
-* [`ts-node`](https://www.npmjs.com/package/ts-node)-työkalun TypeScript-koodin suorittamiseksi Node.js:llä
-* [Jest-testaustyökalun](https://www.npmjs.com/package/jest) sekä [`ts-jest`](https://www.npmjs.com/package/ts-jest)-paketin TypeScript-kielisen koodin testaamiseksi.
+* [`tsx`](https://www.npmjs.com/package/tsx)-työkalun TypeScript-koodin suorittamiseksi Node.js:llä
+* [Vitest-testaustyökalun](https://www.npmjs.com/package/vitest)
 * [Express](https://www.npmjs.com/package/express)-web-sovelluskehyksen
 * [Supertest](https://www.npmjs.com/package/supertest)-paketin Express-sovelluksen testaamiseksi
 
-Node.js sinulta tulee löytyä valmiina. [Express.js:n versio 5 edellytää Node.js:n versiota 18 tai uudempaa](https://expressjs.com/en/starter/installing.html). Mikäli sinulla on vanhempi Node.js-versio, voit vaihtaa [package.json](./package.json)-tiedostoon Express- sekä @types/express-paketeille vanhemman version 4, joka tukee myös vanhempia Node.js-versioita.
+Node.js ja npm sinulta tulee löytyä valmiina.
 
 
 ## Pääohjelman suorittaminen
@@ -45,7 +45,7 @@ Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](.
 
 ```sh
 $ npm start                         # tapa 1
-$ npx ts-node src/usersAndPosts.ts  # tapa 2
+$ npx tsx src/usersAndPosts.ts      # tapa 2
 ```
 
 Ohjelman tuloste on muodoltaan esim. seuraava:
@@ -69,9 +69,9 @@ Edellisestä tehtävästä poiketen käyttäjille on tallennettuna **rekisteröi
 💡 *Sinun ei tarvitse muuttaa `usersAndPosts.ts`-tiedostoa ratkaistessasi tätä tehtävää. Tiedoston muuttaminen esim. ohjelman toiminnan tutkimiseksi on kuitenkin halutessasi sallittua.*
 
 
-### Testit (Jest) ja REST-rajapinta (Express)
+### Testit (Vitest) ja REST-rajapinta (Express)
 
-Ohjelman kehitys on ottanut edellisen tehtävän jälkeen melkoisia harppauksia. Lisäksi vaatimukset **koodin yksikkötestauksen** sekä **uudelleenkäytettävyyden** osalta ovat lisääntyneet, joten ohjelma on pilkottu useisiin erillisiin funktioihin ja tiedostoihin. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti. Tehtävän edetessä sinun tulee suorittaa testejä, jotka on kirjoitettu [Jest-työkalulla](https://jestjs.io/):
+Ohjelman kehitys on ottanut edellisen tehtävän jälkeen melkoisia harppauksia. Lisäksi vaatimukset **koodin yksikkötestauksen** sekä **uudelleenkäytettävyyden** osalta ovat lisääntyneet, joten ohjelma on pilkottu useisiin erillisiin funktioihin ja tiedostoihin. Sinun tehtäväsi on jatkaa kehitystyötä fiktiivisen tuoteomistajan vaatimusten mukaisesti. Tehtävän edetessä sinun tulee suorittaa testejä, jotka on kirjoitettu [Vitest-työkalulla](https://vitest.dev/):
 
 ```
 npm test
@@ -356,25 +356,13 @@ sorting users by registration date
 
 TypeScript itsessään on lisensoitu Apache-2.0 -lisenssillä: https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt
 
-## Ts-node
+### Tsx
 
-> _ts-node is licensed under the MIT license. [MIT](https://github.com/TypeStrong/ts-node/blob/main/LICENSE)_
->
-> _ts-node includes source code from Node.js which is licensed under the MIT license. [Node.js license information](https://raw.githubusercontent.com/nodejs/node/master/LICENSE)_
->
-> _ts-node includes source code from the TypeScript compiler which is licensed under the Apache License 2.0. [TypeScript license information](https://github.com/microsoft/TypeScript/blob/master/LICENSE.txt)_
->
-> https://github.com/TypeStrong/ts-node/#license
+Tsx-työkalu on lisensoitu MIT-lisenssillä: https://github.com/privatenumber/tsx/blob/master/LICENSE
 
-## Jest
+## Vitest
 
-Jest is licensed under the MIT license. See [LICENSE](https://github.com/facebook/jest/blob/main/LICENSE) for the full license text.
-
-## ts-jest
-
-> _"This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/kulshekhar/ts-jest/blob/main/LICENSE.md) file for details"_
->
-> https://github.com/kulshekhar/ts-jest/#license
+Vitest-työkalu on lisensoitu MIT-lisenssillä: https://github.com/vitest-dev/vitest/blob/main/LICENSE
 
 ## Express
 

@@ -4,6 +4,7 @@
  * See the readme.md for more information.
  */
 
+import { readFile } from "fs/promises";
 import { filterOutDeletedPosts } from "./filtering.js";
 import { mapPostsToUsers } from "./mapping.js";
 import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.js";
@@ -13,29 +14,28 @@ import { Post, User, UserWithPosts } from "./types.js";
  * Reads posts from the `posts.json` file and returns them as an array.
  * The posts are sorted from oldest to newest and deleted posts are excluded.
  */
-function getPosts(): Post[] {
-    let posts = require('../data/posts.json') as Post[];
+async function getPosts(): Promise<Post[]> {
+
+    const postsFile = new URL('../data/posts.json', import.meta.url);
+    const posts: Post[] = JSON.parse(await readFile(postsFile, 'utf8'));
 
     // exclude posts that are marked as deleted:
-    posts = filterOutDeletedPosts(posts);
+    const activePosts = filterOutDeletedPosts(posts);
 
-    // posts are sorted from oldest to newest:
-    posts = sortPostsByPublishedDate(posts);
-
-    return posts;
+    // active posts are sorted from oldest to newest:
+    return sortPostsByPublishedDate(activePosts);
 }
 
 /**
  * Reads users from the `users.json` file and returns them as an array.
  * The users are sorted from oldest to newest by registration date.
  */
-function getUsers(): User[] {
-    let users = require('../data/users.json') as User[];
+async function getUsers(): Promise<User[]> {
+    const usersFile = new URL('../data/users.json', import.meta.url);
+    const users: User[] = JSON.parse(await readFile(usersFile, 'utf8'));
 
     // users are sorted in ascending order by registration date
-    users = sortUsersByRegistrationDate(users);
-
-    return users;
+    return sortUsersByRegistrationDate(users);
 }
 
 
@@ -43,9 +43,9 @@ function getUsers(): User[] {
  * Reads the users and posts from the JSON files and prints them to the console.
  * Each user is printed along with their own posts.
  */
-function printUsersAndPosts() {
-    const users: User[] = getUsers();
-    const posts: Post[] = getPosts();
+async function printUsersAndPosts() {
+    const users: User[] = await getUsers();
+    const posts: Post[] = await getPosts();
 
     // posts are combined to users in a testable and reusable way
     let usersAndPosts: UserWithPosts[] = mapPostsToUsers(users, posts);
