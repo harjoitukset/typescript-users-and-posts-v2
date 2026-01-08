@@ -344,15 +344,15 @@ sorting users by registration date
 
 🚀 *Vaikka saat käyttää valmista sort-metodia, edellisessä osassa toteuttamasi lajittelualgoritmin jatkokehittäminen ["geneeriseksi"](https://www.typescriptlang.org/docs/handbook/2/generics.html) voi olla opettavainen kokemus. Geneerisistä tyypeistä löydät lisätietoa esim. videolta [TypeScript Generics are EASY once you know this (ByteGrad)](https://www.youtube.com/watch?v=ymSRTXT-iK4).*
 
-# Lisenssit ja tekijänoikeudet
+## Lisenssit ja tekijänoikeudet
 
-## Node.js
+### Node.js
 
 > _"Node.js is available under the [MIT license](https://opensource.org/licenses/MIT). Node.js also includes external libraries that are available under a variety of licenses. See [LICENSE](https://github.com/nodejs/node/blob/HEAD/LICENSE) for the full license text."_
 >
 > https://github.com/nodejs/node#license
 
-## TypeScript
+### TypeScript
 
 TypeScript itsessään on lisensoitu Apache-2.0 -lisenssillä: https://github.com/microsoft/TypeScript/blob/main/LICENSE.txt
 
@@ -360,22 +360,22 @@ TypeScript itsessään on lisensoitu Apache-2.0 -lisenssillä: https://github.co
 
 Tsx-työkalu on lisensoitu MIT-lisenssillä: https://github.com/privatenumber/tsx/blob/master/LICENSE
 
-## Vitest
+### Vitest
 
 Vitest-työkalu on lisensoitu MIT-lisenssillä: https://github.com/vitest-dev/vitest/blob/main/LICENSE
 
-## Express
+### Express
 
 Express is licensed under the MIT license. See [LICENSE](https://github.com/expressjs/express/blob/master/LICENSE) for the full license text.
 
-## Supertest
+### Supertest
 
 Supertest is licensed under the MIT license. See [LICENSE](https://github.com/ladjs/supertest/blob/master/LICENSE) for the full license text.
 
-## DummyJSON
+### DummyJSON
 
 Tehtävässä hyödynnetyn [DummyJSON](https://github.com/Ovi/DummyJSON/)-palvelun on kehittänyt [Muhammad Ovi (Owais)](https://github.com/Ovi/) ja se on lisensoitu MIT-lisenssillä: [https://github.com/Ovi/DummyJSON/blob/master/LICENSE](https://github.com/Ovi/DummyJSON/blob/master/LICENSE).
 
-## Tämä tehtävä
+### Tämä tehtävä
 
 Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/). Tehtävänannon, lähdekoodien ja testien toteutuksessa on hyödynnetty ChatGPT-kielimallia sekä GitHub copilot -tekoälyavustinta.
