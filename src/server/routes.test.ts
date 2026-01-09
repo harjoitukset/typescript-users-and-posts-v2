@@ -1,7 +1,7 @@
 import express from 'express';
 import request from 'supertest';
 import { describe, expect, test } from 'vitest';
-import { router } from './routes';
+import { router } from './routes.js';
 
 // Set up Express app for testing. This does not start the server or listen on any port.
 const app = express();

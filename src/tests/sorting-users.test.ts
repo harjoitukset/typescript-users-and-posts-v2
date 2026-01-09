@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
-import { sortUsersByRegistrationDate } from '../sorting';
-import { User } from '../types';
+import { sortUsersByRegistrationDate } from '../sorting.js';
+import { User } from '../types.js';
 
 
 describe('sorting users by registration date', () => {

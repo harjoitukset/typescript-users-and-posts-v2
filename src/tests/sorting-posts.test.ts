@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, test, vitest } from 'vitest';
-import { sortPostsByPublishedDate } from '../sorting';
-import { Post } from '../types';
+import { sortPostsByPublishedDate } from '../sorting.js';
+import { Post } from '../types.js';
 
 
 describe('sorting posts by publishedAt', () => {
