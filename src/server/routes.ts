@@ -36,7 +36,7 @@ router.get('/api/v1/user', async (req: Request, res: Response) => {
  * is sent back to the client. The id of the user is extracted from the URL, for example, /api/v1/user/1.
  */
 router.get('/api/v1/user/:id', async (req: Request, res: Response) => {
-    const userId = parseInt(req.params.id);
+    const userId = parseInt(req.params.id as string);
 
     const users: User[] = await getUsers();
     const posts: Post[] = await getPosts();
