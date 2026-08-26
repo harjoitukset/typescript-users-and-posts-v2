@@ -20,7 +20,7 @@ Adds a `registeredAt` timestamp in each user:
      "age": 50,
      "gender": "male",
      "userAgent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/534.24 (KHTML, like Gecko) Chrome/12.0.702.0 Safari/534.24",
-+    "registeredAt": "2022-07-16T22:57:59.361Z"
++    "registeredAt": "2026-07-16T22:57:59.361Z"
    },
    {
      "id": 2,
@@ -30,7 +30,7 @@ Adds a `registeredAt` timestamp in each user:
      "age": 28,
      "gender": "male",
      "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/534.30 (KHTML, like Gecko) Ubuntu/11.04 Chromium/12.0.742.112 Chrome/12.0.742.112 Safari/534.30",
-+    "registeredAt": 1638589047
++    "registeredAt": 1764733047
    }
  ]
 ```
@@ -52,7 +52,7 @@ Adds a `publishedAt` timestamp in each post, and `deletedAt` timestamp to random
        "american"
      ],
      "reactions": 1,
-+    "publishedAt": "2023-04-17T18:16:52.003Z"
++    "publishedAt": "2026-04-17T18:16:52.003Z"
    },
    {
      "id": 5,
@@ -65,8 +65,8 @@ Adds a `publishedAt` timestamp in each post, and `deletedAt` timestamp to random
        "love"
      ],
      "reactions": 2,
-+    "publishedAt": "2023-06-01T08:07:20.410Z",
-+    "deletedAt": "2023-06-14T02:16:08.513Z"
++    "publishedAt": "2026-06-01T08:07:20.410Z",
++    "deletedAt": "2026-06-14T02:16:08.513Z"
    }
  ]
 ```
