@@ -2,7 +2,7 @@
     "tests": [
         {
             "name": "excludeDeletedPosts",
-            "setup": "npm install",
+            "setup": "",
             "run": "npm test src/tests/filtering.test.ts",
             "input": "",
             "output": "",
@@ -12,7 +12,7 @@
         },
         {
             "name": "mapPostsToUsers",
-            "setup": "npm install",
+            "setup": "",
             "run": "npm test src/tests/mapping.test.ts",
             "input": "",
             "output": "",
@@ -22,7 +22,7 @@
         },
         {
             "name": "sortPostsByPublishedDate",
-            "setup": "npm install",
+            "setup": "",
             "run": "npm test src/tests/sorting-posts.test.ts",
             "input": "",
             "output": "",
@@ -32,7 +32,7 @@
         },
         {
             "name": "sortUsersByRegistrationDate",
-            "setup": "npm install",
+            "setup": "",
             "run": "npm test src/tests/sorting-users.test.ts",
             "input": "",
             "output": "",
