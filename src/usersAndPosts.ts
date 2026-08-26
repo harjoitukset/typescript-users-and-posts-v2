@@ -3,9 +3,9 @@
  * Initially, the output is not sorted or filtered. Your task is to implement the functions in the other files.
  * See the readme.md for more information.
  */
-import { getPosts, getUsers } from "./files.js";
-import { mapPostsToUsers } from "./mapping.js";
-import { type Post, type User, type UserWithPosts } from "./types.js";
+import { getPosts, getUsers } from "./files.ts";
+import { mapPostsToUsers } from "./mapping.ts";
+import { type Post, type User, type UserWithPosts } from "./types.ts";
 
 
 /**

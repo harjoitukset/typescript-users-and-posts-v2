@@ -1,17 +1,18 @@
 /* Visit https://aka.ms/tsconfig to read more about this file */
 {
     "compilerOptions": {
-        "target": "es2024", /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-        "module": "nodenext", /* Specify what module code is generated. */
-        "rootDir": "src", /* Specify the root folder within your source files. */
-        "outDir": "build", /* Specify an output folder for all emitted files. */
-        "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-        "strict": true, /* Enable all strict type-checking options. */
-        "moduleResolution": "nodenext", /* see https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution */
-    },
-    "exclude": [
-        "src/**/*.test.ts",
-        "node_modules",
-        "build"
-    ]
+        "target": "esnext",
+        "module": "nodenext",
+        "types": [
+            "node"
+        ],
+        "rootDir": "src",
+        "esModuleInterop": true,
+        "strict": true,
+        "moduleResolution": "nodenext",
+        "erasableSyntaxOnly": true,
+        "rewriteRelativeImportExtensions": true,
+        "verbatimModuleSyntax": true,
+        "noEmit": true
+    }
 }

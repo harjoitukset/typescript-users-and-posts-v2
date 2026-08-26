@@ -1,7 +1,7 @@
 import express from 'express';
 import request from 'supertest';
 import { describe, expect, test } from 'vitest';
-import { router } from './routes.js';
+import { router } from './routes.ts';
 
 // Set up Express app for testing. This does not start the server or listen on any port.
 const app = express();
@@ -24,7 +24,6 @@ describe('API Tests', () => {
         expect(response.headers['content-type']).toBe('application/json; charset=utf-8');
         expect(Array.isArray(response.body)).toBe(true);
     });
-
 
     test('/api/v1/user/2 returns a single user with posts', async () => {
         const response = await request(app).get('/api/v1/user/2');

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
-import { filterOutDeletedPosts } from '../filtering.js';
-import { Post } from '../types.js';
+import { filterOutDeletedPosts } from '../filtering.ts';
+import { type Post } from '../types.ts';
 
 /**
  * This helper function creates a test post with a given `publishedAt` and `deletedAt` time.

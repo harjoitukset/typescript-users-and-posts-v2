@@ -1,4 +1,4 @@
-import { type Post } from "./types.js";
+import { type Post } from "./types.ts";
 
 
 /**

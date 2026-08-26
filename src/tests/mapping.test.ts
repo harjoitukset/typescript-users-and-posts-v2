@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
-import { mapPostsToUsers } from '../mapping.js';
-import { Post, User } from '../types.js';
+import { mapPostsToUsers } from '../mapping.ts';
+import { type Post, type User } from '../types.ts';
 
 
 

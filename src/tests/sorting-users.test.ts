@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
-import { sortUsersByRegistrationDate } from '../sorting.js';
-import { User } from '../types.js';
+import { sortUsersByRegistrationDate } from '../sorting.ts';
+import { type User } from '../types.ts';
 
 
 describe('sorting users by registration date', () => {

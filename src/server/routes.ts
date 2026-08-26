@@ -4,10 +4,10 @@
  * test your filtering and sorting functions. If you wish, you are free to modify this file to suit your needs.
  */
 
-import { Request, Response, Router } from 'express';
-import { getPosts, getUsers } from '../files.js';
-import { mapPostsToUsers } from '../mapping.js';
-import { type Post, type User, type UserWithPosts } from '../types.js';
+import { type Request, type Response, Router } from 'express';
+import { getPosts, getUsers } from '../files.ts';
+import { mapPostsToUsers } from '../mapping.ts';
+import { type Post, type User, type UserWithPosts } from '../types.ts';
 
 
 /**

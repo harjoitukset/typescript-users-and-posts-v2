@@ -5,9 +5,9 @@
  */
 
 import { readFile } from "fs/promises";
-import { filterOutDeletedPosts } from "./filtering.js";
-import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.js";
-import { type Post, type User } from "./types.js";
+import { filterOutDeletedPosts } from "./filtering.ts";
+import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.ts";
+import { type Post, type User } from "./types.ts";
 
 /**
  * Reads posts from the `posts.json` file and returns them as an array.
