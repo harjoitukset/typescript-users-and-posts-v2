@@ -13,7 +13,7 @@ describe('Reading the JSON files', () => {
         const users = await getUsers();
 
         expect(Array.isArray(users)).toBe(true);
-        expect(users.length).toBeGreaterThan(0); // there should be at least one user
+        expect(users.length).toBe(100);
 
         // check that each user has the expected properties
         users.forEach(user => {
@@ -30,7 +30,7 @@ describe('Reading the JSON files', () => {
         const posts = await getPosts();
 
         expect(Array.isArray(posts)).toBe(true);
-        expect(posts.length).toBeGreaterThan(0); // there should be at least one post
+        expect(posts.length).toBe(150);
 
         // check that each post has the expected properties
         posts.forEach(post => {

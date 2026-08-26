@@ -1,15 +1,19 @@
-import { type Post } from "./types.ts";
+import { type Post, type User } from "./types.ts";
 
 
 /**
- * Filters an array of posts to exclude posts with a 'deletedAt' timestamp.
- *
- * @param posts  The array of post objects to be filtered.
- * @returns A copy of the given array of posts without deleted posts.
+ * Returns an array of posts that do not have a 'deletedAt' timestamp. The original array is not modified.
  */
-export function filterOutDeletedPosts(posts: Post[]): Post[] {
-    // TODO: Implement filtering logic to exclude deleted posts
-    // Return the filtered array
+export function excludeDeletedPosts(posts: Post[]): Post[] {
+    // TODO: Implement filtering logic to exclude posts that have a 'deletedAt' timestamp.
 
     return posts.filter(post => true); // FIXME: this should not return all posts
+}
+
+/**
+ * Returns a new array of posts that belong to the given user. The original array is not modified.
+ */
+export function selectPostsByUser(posts: Post[], user: User): Post[] {
+    // FIXME: Implement filtering logic to select posts that belong to the given user.
+    return posts;
 }

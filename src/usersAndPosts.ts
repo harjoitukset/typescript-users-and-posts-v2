@@ -4,7 +4,9 @@
  * See the readme.md for more information.
  */
 import { getPosts, getUsers } from "./files.ts";
+import { excludeDeletedPosts } from "./filtering.ts";
 import { mapPostsToUsers } from "./mapping.ts";
+import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.ts";
 import { type Post, type User, type UserWithPosts } from "./types.ts";
 
 
@@ -13,22 +15,40 @@ import { type Post, type User, type UserWithPosts } from "./types.ts";
  * Each user is printed along with their own posts.
  */
 async function printUsersAndPosts() {
-    const users: User[] = await getUsers();
-    const posts: Post[] = await getPosts();
+    const allUsers: User[] = await getUsers();
+    const allPosts: Post[] = await getPosts();
 
-    // posts are combined to users in a testable and reusable way
-    let usersAndPosts: UserWithPosts[] = mapPostsToUsers(users, posts);
+    // sort and filter users and posts before combining them
+    const sortedUsers = sortUsersByRegistrationDate(allUsers);
+    const activePostsSorted = sortPostsByPublishedDate(excludeDeletedPosts(allPosts));
+
+    // each user will be combined with their own posts
+    let usersAndPosts: UserWithPosts[] = mapPostsToUsers(sortedUsers, activePostsSorted);
 
     usersAndPosts.forEach(user => {
-        console.log(`# ${user.firstName} ${user.lastName} (${user.registeredAt})`);
-
-        user.posts.forEach(p => {
-            console.log(` - ${p.title}`);
-            console.log(`   ${p.publishedAt} ${p.deletedAt ?? ''}`)
-        });
-
-        console.log(); // empty line between each user
+        console.log(createUserPostReport(user));
+        console.log(''); // empty line between users
     });
+}
+
+/**
+ * Returns a string representation of a user and their posts in a markdown-like format.
+ */
+function createUserPostReport(user: UserWithPosts) {
+    const lines = [
+        `# ${user.firstName} ${user.lastName}, registered: (${user.registeredAt})`,
+        `` // empty line between the user and their posts
+    ];
+
+    user.posts.forEach(p => {
+        lines.push(`- ${p.title}`);
+        lines.push(`  Published: ${p.publishedAt}`);
+        if (p.deletedAt) {
+            lines.push(`  Deleted: ${p.deletedAt}`);
+        }
+    });
+
+    return lines.join('\n');
 }
 
 printUsersAndPosts();

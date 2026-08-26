@@ -1,4 +1,8 @@
-export interface Post {
+/**
+ * The basic Post type with publishedAt and deletedAt timestamps.
+ * The deletedAt timestamp is optional, and if it is present, the post is considered deleted.
+ */
+export type Post = {
     id: number;
     title: string;
     body: string;
@@ -11,9 +15,15 @@ export interface Post {
 
     /** Optional time of deletion in ISO format, for example "2023-04-10T09:45:00Z" */
     deletedAt?: string;
-}
+};
 
-export interface User {
+
+/**
+ * The User type represents a user in the system with various attributes.
+ * The 'registeredAt' property can be either a number (epoch timestamp in seconds)
+ * or a string (ISO format) depending on how the user registered.
+ */
+export type User = {
     id: number;
     firstName: string;
     lastName: string;
@@ -29,10 +39,13 @@ export interface User {
     ssn: string;
     userAgent: string;
 
-    /** Users who registered through our mobile app have an integer value representing the epoch
-     *  timestamp in seconds, while users who registered through the web app have a string in ISO format. */
+    /**
+     * "Users who registered through our mobile app have an integer value representing the epoch
+     * timestamp in seconds, while users who registered through the web app have a string in ISO format."
+     */
     registeredAt: number | string;
-}
+};
+
 
 /**
  * Represents a user with associated posts.

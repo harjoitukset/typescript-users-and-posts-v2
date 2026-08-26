@@ -25,7 +25,7 @@ Tehtävän suorittamiseksi tarvitset [Node.js-suoritusympäristön](https://node
 Aloita asentamalla projektin riippuvuudet, jotka on määritelty [`package.json`-tiedostossa](./package.json):
 
 ```sh
-$ npm install
+npm install
 ```
 
 Riippuvuudet sisältävät:
@@ -59,17 +59,19 @@ Ohjelman tuloste on muodoltaan esim. seuraava:
 
 ```
 # Emma Johnson, registered: 2026-07-16T22:57:59.361Z
- - Running TypeScript with Node.js
-   Published: 2027-06-30T05:30:54.612Z
- - Running TypeScript in the browser
-   Published: 2025-07-11T05:33:06.104Z
-   Deleted: 2027-07-21T23:53:01.586Z
+
+- Running TypeScript with Node.js
+  Published: 2027-06-30T05:30:54.612Z
+- Running TypeScript in the browser
+  Published: 2025-07-11T05:33:06.104Z
+  Deleted: 2027-07-21T23:53:01.586Z
 
 # Olivia Smith, registered: 1764733047
- - Understanding JavaScript closures
-   Published: 2027-09-01T10:02:19.997Z
- - How to exit vim
-   Published: 2027-07-13T09:33:37.100Z
+
+- Understanding JavaScript closures
+  Published: 2027-09-01T10:02:19.997Z
+- How to exit vim
+  Published: 2027-07-13T09:33:37.100Z
 ```
 
 Edellisestä tehtävästä poiketen käyttäjille on tallennettuna **rekisteröitymisaika** suluissa nimen jälkeen. Postauksille on myös lisätty **luontiaika**, minkä lisäksi osalla postauksista on myös **poistamisaika**. Nämä ajat tulostuvat otsikon alapuolelle.
@@ -106,7 +108,9 @@ curl http://localhost:3000/api/v1/user
 curl http://localhost:3000/api/v1/user/1
 ```
 
-Keskitymme tehtävän ohjeissa komentorivikäyttöliittymään. [/src/server/](./src/server/)-hakemiston tiedostot on pyritty kommentoimaan siten, että pärjäät niiden kanssa itsenäisesti.
+Huomaa, että lähdekoodiin tekemäsi muutokset eivät näy REST-rajapinnassa ennen kuin olet kääntänyt koodin ja käynnistänyt palvelimen uudelleen.
+
+[/src/server/](./src/server/)-hakemiston tiedostot on pyritty kommentoimaan siten, että pärjäät niiden kanssa itsenäisesti.
 
 
 ## Tehtävän data
@@ -162,9 +166,9 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 >
 > I hope this message finds you well. We have some critical tasks ahead that require your immediate attention. These tasks are not only essential for our product's success but also for my quarterly bonus, which is directly tied to their successful completion.
 >
-> * Task 1: *filterOutDeletedPosts*
+> * Task 1: *excludeDeletedPosts*
 >
->   Your first task is to implement a [*filterOutDeletedPosts* function](./src/filtering.ts). We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
+>   Your first task is to implement a [*excludeDeletedPosts* function](./src/filtering.ts). We've received complaints from our customers about deleted posts appearing in the listings. It's absolutely crucial that posts with a *deletedAt* timestamp are filtered out without fail.
 >
 > * Task 2: *mapPostsToUsers*
 >
@@ -197,16 +201,18 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 > This email was written with help from ChatGPT
 
 
-## Osa 1: `filterOutDeletedPosts` (10 % pisteistä)
+## Osa 1: suodattaminen eli filtering (10 % pisteistä)
 
-Toteuta funktio `filterOutDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset [Post-objektit](./src/types.ts), joilla on asetettuna jokin `deletedAt`-arvo.
+Toteuta funktio `excludeDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää annetun taulukon `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset [Post-objektit](./src/types.ts), joilla on asetettuna jokin `deletedAt`-arvo.
 
 Lue lisää filter-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
+
+Toteuta lisäksi funktio `selectPostsByUser`, joka palauttaa uuden taulukon, joka sisältää vain annetun käyttäjän omat postaukset. Tämäkään funktio ei saa muokata alkuperäistä taulukkoa.
 
 Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/filtering.test.ts), jotka voit suorittaa seuraavalla komennolla:
 
 ```
-$ npm test src/tests/filtering.test.ts
+npm test src/tests/filtering.test.ts
 
 filtering posts
   ✓ active posts are included in the result
@@ -229,7 +235,7 @@ Lue lisää map-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.o
 Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/mapping.test.ts), jotka voit suorittaa seuraavalla komennolla:
 
 ```
-$ npm test src/tests/mapping.test.ts
+npm test src/tests/mapping.test.ts
 
 mapUsersWithPosts
   ✓ posts are mapped with users correctly
@@ -258,7 +264,7 @@ Huomaa, että koodisi tulee lajitella **kokonaisia Post-objekteja**, eli et voi 
 Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/sorting-posts.test.ts), jotka voit suorittaa seuraavalla komennolla:
 
 ```
-$ npm test src/tests/sorting-posts.test.ts
+npm test src/tests/sorting-posts.test.ts
 
 sorting posts by publishedAt
   ✓ post are returned in correct order
@@ -355,7 +361,7 @@ Lisäksi saatat hyötyä [`typeof`-operaattorista](https://developer.mozilla.org
 Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/sorting-users.test.ts), jotka voit ajaa seuraavalla komennolla:
 
 ```
-$ npm test src/tests/sorting-users.test.ts
+npm test src/tests/sorting-users.test.ts
 
 sorting users by registration date
   ✓ users with Unix timestamps are sorted in correct order
@@ -366,8 +372,6 @@ sorting users by registration date
   ✓ sorting must not modify the users
   ✓ sorting must not modify the original array
 ```
-
-🚀 *Vaikka saat käyttää valmista sort-metodia, edellisessä osassa toteuttamasi lajittelualgoritmin jatkokehittäminen ["geneeriseksi"](https://www.typescriptlang.org/docs/handbook/2/generics.html) voi olla opettavainen kokemus. Geneerisistä tyypeistä löydät lisätietoa esim. videolta [TypeScript Generics are EASY once you know this (ByteGrad)](https://www.youtube.com/watch?v=ymSRTXT-iK4).*
 
 
 ## Tehtävän arviointi
@@ -392,7 +396,7 @@ npm test
 
 ### Node.js
 
-> _"Node.js is available under the [MIT license](https://opensource.org/licenses/MIT). Node.js also includes external libraries that are available under a variety of licenses. See [LICENSE](https://github.com/nodejs/node/blob/HEAD/LICENSE) for the full license text."_
+> "Node.js is available under the [MIT license](https://opensource.org/licenses/MIT). Node.js also includes external libraries that are available under a variety of licenses. See [LICENSE](https://github.com/nodejs/node/blob/HEAD/LICENSE) for the full license text."
 >
 > https://github.com/nodejs/node#license
 
@@ -418,4 +422,4 @@ Tehtävässä hyödynnetyn [DummyJSON](https://github.com/Ovi/DummyJSON/)-palvel
 
 ### Tämä tehtävä
 
-Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/). Tehtävänannon, lähdekoodien ja testien toteutuksessa on hyödynnetty ChatGPT-kielimallia sekä GitHub copilot -tekoälyavustinta.
+Tämän tehtävän on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/). Tehtävänannon, lähdekoodien ja testien toteutuksessa on hyödynnetty ChatGPT- sekä GitHub copilot -tekoälytyökaluja.

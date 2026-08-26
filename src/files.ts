@@ -5,24 +5,20 @@
  */
 
 import { readFile } from "fs/promises";
-import { filterOutDeletedPosts } from "./filtering.ts";
-import { sortPostsByPublishedDate, sortUsersByRegistrationDate } from "./sorting.ts";
 import { type Post, type User } from "./types.ts";
+
+// Relative paths to the JSON files containing the data:
+const postsFile = new URL('../data/posts.json', import.meta.url);
+const usersFile = new URL('../data/users.json', import.meta.url);
 
 /**
  * Reads posts from the `posts.json` file and returns them as an array.
  * The posts are sorted from oldest to newest and deleted posts are excluded.
  */
 export async function getPosts(): Promise<Post[]> {
-
-    const postsFile = new URL('../data/posts.json', import.meta.url);
     const posts: Post[] = JSON.parse(await readFile(postsFile, 'utf8'));
 
-    // exclude posts that are marked as deleted:
-    const activePosts = filterOutDeletedPosts(posts);
-
-    // active posts are sorted from oldest to newest:
-    return sortPostsByPublishedDate(activePosts);
+    return posts;
 }
 
 /**
@@ -30,9 +26,7 @@ export async function getPosts(): Promise<Post[]> {
  * The users are sorted from oldest to newest by registration date.
  */
 export async function getUsers(): Promise<User[]> {
-    const usersFile = new URL('../data/users.json', import.meta.url);
     const users: User[] = JSON.parse(await readFile(usersFile, 'utf8'));
 
-    // users are sorted in ascending order by registration date
-    return sortUsersByRegistrationDate(users);
+    return users;
 }
