@@ -1,10 +1,10 @@
 # Users & Posts v2: Filter, Map & Sort
 
-Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään [taulukkofunktioihin](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) sekä lajittelualgoritmeihin. Tehtävä on jatkoa [Users & Posts](https://github.com/harjoitukset/typescript-users-and-posts) -tehtävälle.
+Tässä tehtävässä jatketaan TypeScriptin parissa ja perehdytään [taulukkofunktioihin](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) sekä lajittelualgoritmeihin. Tehtävä on jatkoa Users & Posts -tehtävälle, mutta sen ratkaiseminen ei edellytä esitietoja edellisestä tehtävästä.
 
 Tehtävän ensimmäisessä osassa perehdyttiin TypeScript-kieleen ja ratkaisun tyyli oli vapaa. Tällä kertaa tavoitteenamme on opetella tiettyjä ennalta valittuja algoritmeja sekä tietorakenteita. Samalla teemme koodista testattavaa ja uudelleenkäytettävää.
 
-Koska tehtävän tavoitteena on rakentaa uudelleenkäytettävä ratkaisu, voit ratkaista tätä tehtävää halutessasi joko komentorivikäyttöliittymän tai **repositorioon valmiiksi toteutetun REST-rajapinnan parissa**.
+Koska tehtävän tavoitteena on rakentaa uudelleenkäytettävä ratkaisu, voit ratkaista tätä tehtävää halutessasi joko komentorivikäyttöliittymän tai valmiiksi toteutetun REST-rajapinnan parissa.
 
 > [!TIP]
 > Hyödynnämme tässä tehtävässä suosittuja [Vitest](https://vitest.dev/)- ja [Express](https://expressjs.com/)-työkaluja. Sinun ei kuitenkaan tarvitse tehdä muutoksia Vitest- eikä Express-koodiin.
@@ -20,9 +20,9 @@ Tehtävän suorittamiseksi tarvitset [Node.js-suoritusympäristön](https://node
 > Kehityskontti eristää projektin muusta käyttöjärjestelmästä, joten sillä voi olla myös positiivisia tietoturvavaikutuksia.
 
 
-## Riippuvuuksien asentaminen
+**Riippuvuuksien asentaminen**
 
-Aloita asentamalla projektin riippuvuudet, jotka on määritelty [`package.json`-tiedostossa](./package.json):
+Kehitysympäristön valmistelun jälkeen jatka asentamalla projektin riippuvuudet, jotka on määritelty [`package.json`-tiedostossa](./package.json):
 
 ```sh
 npm install
@@ -102,7 +102,7 @@ npm test
 
 Ohjelmassa on komentorivikäyttöliittymän lisäksi myös uusi REST-rajapinta, jota voit halutessasi käyttää ratkaisusi kokeilemisessa. Rajapinta on toteutettu [Express-kirjastolla](https://expressjs.com/) ja siihen liittyvät tiedostot löytyvät [/src/server/](./src/server/)-hakemistosta. Voit käynnistää palvelimen komennolla:
 
-```
+```sh
 # vaihtoehto 1: käännä koodi ja suorita:
 npm run build
 npm run server
