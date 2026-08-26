@@ -214,10 +214,14 @@ Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/filtering.test.ts), jo
 ```
 npm test src/tests/filtering.test.ts
 
-filtering posts
+
+✓ filtering active posts (4)
   ✓ active posts are included in the result
   ✓ posts marked as deleted are excluded from the result
   ✓ deleted posts are removed from the beginning, end and between active articles
+  ✓ the function does not modify the original array
+✓ filtering by user (2)
+  ✓ posts belonging to the given user are included in the result
   ✓ the function does not modify the original array
 ```
 
@@ -237,7 +241,8 @@ Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/mapping.test.ts), jotk
 ```
 npm test src/tests/mapping.test.ts
 
-mapUsersWithPosts
+
+✓ mapUsersWithPosts (3)
   ✓ posts are mapped with users correctly
   ✓ function does not modify given users
   ✓ empty input arrays are handled without errors
@@ -266,7 +271,8 @@ Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/sorting-posts.test.ts)
 ```
 npm test src/tests/sorting-posts.test.ts
 
-sorting posts by publishedAt
+
+✓ sorting posts by publishedAt (5)
   ✓ post are returned in correct order
   ✓ sorting handles posts with identical dates correctly
   ✓ sorting an empty array should not throw exceptions
@@ -363,14 +369,15 @@ Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/sorting-users.test.ts)
 ```
 npm test src/tests/sorting-users.test.ts
 
-sorting users by registration date
-  ✓ users with Unix timestamps are sorted in correct order
-  ✓ users with ISO dates are sorted in correct order
-  ✓ users with both numeric and string dates are sorted in correct order
-  ✓ sorting handles posts with identical dates without errors
-  ✓ sorting an empty array must not throw exceptions
-  ✓ sorting must not modify the users
-  ✓ sorting must not modify the original array
+
+✓ sorting users by registration date (7)
+  ✓ users with Unix timestamps are sorted in correct order 2ms
+  ✓ users with ISO dates are sorted in correct order 0ms
+  ✓ users with both numeric and string dates are sorted in correct order 0ms
+  ✓ sorting handles posts with identical dates without errors 0ms
+  ✓ sorting an empty array must not throw exceptions 0ms
+  ✓ sorting must not modify the users 0ms
+  ✓ sorting must not modify the original array 0ms
 ```
 
 

@@ -11,10 +11,7 @@ export function mapPostsToUsers(users: User[], posts: Post[]): UserWithPosts[] {
     return users.map(user => {
         return {
             ...user,
-
-            // FIXME! This just takes the first posts for each user.
-            // You need to filter the posts for each user based on the userId.
-            posts: posts.slice(0, 5)
+            posts: posts.filter(post => post.userId === user.id)
         }
     });
 }

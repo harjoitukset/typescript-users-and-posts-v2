@@ -8,10 +8,26 @@ import { type Post, type User } from "./types.ts";
  * @returns A new array with the posts sorted by publishedAt time.
  */
 export function sortPostsByPublishedDate(posts: Post[]): Post[] {
-    // TODO: Implement manual sorting logic here.
-    // The existing `sort` method must not be used!
-    // See https://en.wikipedia.org/wiki/Sorting_algorithm.
-    return [...posts];
+    return quickSort(posts);
+}
+
+function quickSort(posts: Post[]): Post[] {
+    if (posts.length <= 1) {
+        return posts;
+    }
+    const pivot = posts[posts.length - 1];
+    const left: Post[] = [];
+    const right: Post[] = [];
+
+    for (let i = 0; i < posts.length - 1; i++) {
+        if (new Date(posts[i].publishedAt) < new Date(pivot.publishedAt)) {
+            left.push(posts[i]);
+        } else {
+            right.push(posts[i]);
+        }
+    }
+
+    return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
 /**
@@ -26,5 +42,14 @@ export function sortUsersByRegistrationDate(users: User[]): User[] {
 
     // NOTE! The users' timestamps are presented in Unix time, which counts seconds since epoch.
     // JavaScript Dates use milliseconds instead of seconds. See https://stackoverflow.com/a/221297 for more info.
-    return [...users];
+    return sortUsers([...users]);
+}
+
+
+function sortUsers(users: User[]): User[] {
+    const registerTime = (u: User) => (typeof u.registeredAt === 'number') ? u.registeredAt * 1000 : new Date(u.registeredAt).getTime();
+
+    return users.sort((u1, u2) => {
+        return registerTime(u1) - registerTime(u2);
+    });
 }
