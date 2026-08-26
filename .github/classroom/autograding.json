@@ -1,7 +1,7 @@
 {
     "tests": [
         {
-            "name": "filterOutDeletedPosts",
+            "name": "excludeDeletedPosts",
             "setup": "npm install",
             "run": "npm test src/tests/filtering.test.ts",
             "input": "",
