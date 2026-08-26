@@ -36,7 +36,7 @@ async function printUsersAndPosts() {
  */
 function createUserPostReport(user: UserWithPosts) {
     const lines = [
-        `# ${user.firstName} ${user.lastName}, registered: (${user.registeredAt})`,
+        `# ${user.firstName} ${user.lastName}, registered: ${user.registeredAt}`,
         `` // empty line between the user and their posts
     ];
 

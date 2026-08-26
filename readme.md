@@ -47,13 +47,15 @@ Projektiin valitut riippuvuudet ovat alalla laajalti käytettyjä. Niillä on ki
 Tehtäväpohjassa on valmiiksi toteutettu pääohjelma [/src/usersAndPosts.ts](./src/usersAndPosts.ts), joka tulostaa käyttäjiä ja postauksia. **Tulosteet ovat alussa väärät ja esimerkiksi käyttäjien nimien jälkeen tulostuu aina samat otsikot.** Tulosteet muuttuvat kuitenkin oikeiksi sitä mukaa, kun ratkot tehtävän osia.
 
 ```sh
-# vaihtoehto 1: käännä koodi ja suorita:
+# vaihtoehto 1: käännä koodi JS:ksi ja suorita:
 npm run build
 node build/usersAndPosts.js
 
-# vaihtoehto 2: suorita koodi suoraan nodella:
+# vaihtoehto 2: suorita TS-koodi suoraan nodella:
 node src/usersAndPosts.ts
 ```
+
+Vaihtoehto 1 on varmempi, koska siinä koodi käännetään ensin TypeScriptistä JavaScriptiksi, minkä jälkeen se suoritetaan Node.js:llä. Se kuitenkin edellyttää `npm run build`-komennon suorittamista aina, kun lähdekoodiin on tehty muutoksia. Vaihtoehto 2 on nopeampi, sillä siinä koodia ei käännetä, mutta se voi johtaa ongelmiin, jos TypeScript-koodissa on syntaksivirheitä. TypeScript-koodin suorittaminen suoraan Nodella saattaa toimia myös eri tavoilla riippuen Node.js:n versiosta ja sen asetuksista, minkä vuoksi suosittelemme käyttämään vaihtoehtoa 1.
 
 Ohjelman tuloste on muodoltaan esim. seuraava:
 
@@ -74,10 +76,18 @@ Ohjelman tuloste on muodoltaan esim. seuraava:
   Published: 2027-07-13T09:33:37.100Z
 ```
 
-Edellisestä tehtävästä poiketen käyttäjille on tallennettuna **rekisteröitymisaika** suluissa nimen jälkeen. Postauksille on myös lisätty **luontiaika**, minkä lisäksi osalla postauksista on myös **poistamisaika**. Nämä ajat tulostuvat otsikon alapuolelle.
+Edellisestä tehtävästä poiketen käyttäjille on tallennettuna rekisteröitymisaika nimen jälkeen. Postauksille on myös lisätty luontiaika, minkä lisäksi osalla postauksista on myös poistamisaika. Nämä ajat tulostuvat otsikon alapuolelle:
 
-> [!TIP]
+```
+- Running TypeScript in the browser
+  Published: 2025-07-11T05:33:06.104Z
+  Deleted: 2027-07-21T23:53:01.586Z
+```
+
+> [!NOTE]
 > Sinun ei tarvitse muuttaa `usersAndPosts.ts`-tiedostoa ratkaistessasi tätä tehtävää. Tiedoston muuttaminen esim. ohjelman toiminnan tutkimiseksi on kuitenkin halutessasi sallittua.
+>
+> Toisin kuin edellisessä tehtävässä, tämän tehtävän automaattinen arviointi perustuu pääohjelman sijasta yksittäisten funktioiden testaamiseen yksikkötestien avulla.
 
 
 ### Testit (Vitest) ja REST-rajapinta (Express)
