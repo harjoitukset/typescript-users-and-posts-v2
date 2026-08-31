@@ -55,7 +55,9 @@ node build/usersAndPosts.js
 node src/usersAndPosts.ts
 ```
 
-Vaihtoehto 1 on varmempi, koska siinä koodi käännetään ensin TypeScriptistä JavaScriptiksi, minkä jälkeen se suoritetaan Node.js:llä. Se kuitenkin edellyttää `npm run build`-komennon suorittamista aina, kun lähdekoodiin on tehty muutoksia. Vaihtoehto 2 on nopeampi, sillä siinä koodia ei käännetä, mutta se voi johtaa ongelmiin, jos TypeScript-koodissa on syntaksivirheitä. TypeScript-koodin suorittaminen suoraan Nodella saattaa toimia myös eri tavoilla riippuen Node.js:n versiosta ja sen asetuksista, minkä vuoksi suosittelemme käyttämään vaihtoehtoa 1.
+Vaihtoehto 1, eli kääntäminen ja suorittaminen JS:ksi, on varmempi, koska siinä TypeScript-kääntäjä tarkistaa koodin ennen suoritusta, ja Node.js suorittaa "puhdasta" JavaScriptiä. Se kuitenkin edellyttää `npm run build`-komennon suorittamista aina, kun lähdekoodiin on tehty muutoksia.
+
+Vaihtoehto 2, eli TypeScript-koodin suorittaminen suoraan Nodella, on nopeampi, sillä siinä koodia ei käännetä. Tämä voi kutienkin johtaa erikoisiin ongelmiin, jos TypeScript-koodissa on syntaksivirheitä. TypeScript-koodin suorittaminen suoraan Nodella saattaa toimia myös eri tavoilla riippuen Node.js:n versiosta ja sen asetuksista, minkä vuoksi erityisesti ongelmatilanteissa suosittelemme käyttämään vaihtoehtoa 1.
 
 Ohjelman tuloste on muodoltaan esim. seuraava:
 
@@ -385,13 +387,13 @@ npm test src/tests/sorting-users.test.ts
 
 
 ✓ sorting users by registration date (7)
-  ✓ users with Unix timestamps are sorted in correct order 2ms
-  ✓ users with ISO dates are sorted in correct order 0ms
-  ✓ users with both numeric and string dates are sorted in correct order 0ms
-  ✓ sorting handles posts with identical dates without errors 0ms
-  ✓ sorting an empty array must not throw exceptions 0ms
-  ✓ sorting must not modify the users 0ms
-  ✓ sorting must not modify the original array 0ms
+  ✓ users with Unix timestamps are sorted in correct order
+  ✓ users with ISO dates are sorted in correct order
+  ✓ users with both numeric and string dates are sorted in correct order
+  ✓ sorting handles posts with identical dates without errors
+  ✓ sorting an empty array must not throw exceptions
+  ✓ sorting must not modify the users
+  ✓ sorting must not modify the original array
 ```
 
 
