@@ -3,7 +3,17 @@
         {
             "name": "excludeDeletedPosts",
             "setup": "",
-            "run": "npm test src/tests/filtering.test.ts",
+            "run": "npm test src/tests/filtering-active.test.ts",
+            "input": "",
+            "output": "",
+            "comparison": "exact",
+            "timeout": 1,
+            "points": 10
+        },
+        {
+            "name": "filterPostsByUser",
+            "setup": "",
+            "run": "npm test src/tests/filtering-by-user.test.ts",
             "input": "",
             "output": "",
             "comparison": "exact",
@@ -28,7 +38,7 @@
             "output": "",
             "comparison": "exact",
             "timeout": 1,
-            "points": 40
+            "points": 30
         },
         {
             "name": "sortUsersByRegistrationDate",

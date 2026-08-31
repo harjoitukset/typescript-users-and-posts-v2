@@ -211,31 +211,35 @@ Tuoteomistaja Maxwell Goldgrabber on kirjoittanut sinulle oheisen fiktiivisen sa
 > This email was written with help from ChatGPT
 
 
-## Osa 1: suodattaminen eli filtering (10 % pisteistä)
+## Osa 1: suodattaminen eli filtering (10 % + 10 %)
 
 Toteuta funktio `excludeDeletedPosts`, jonka pohja löytyy tiedostosta [/src/filtering.ts](./src/filtering.ts). Funktion tulee hyödyntää annetun taulukon `filter`-metodia ja palauttaa uusi taulukko, josta puuttuu kaikki sellaiset [Post-objektit](./src/types.ts), joilla on asetettuna jokin `deletedAt`-arvo.
 
 Lue lisää filter-metodista [MDN Web Docs -palvelussa](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter).
 
-Toteuta lisäksi funktio `selectPostsByUser`, joka palauttaa uuden taulukon, joka sisältää vain annetun käyttäjän omat postaukset. Tämäkään funktio ei saa muokata alkuperäistä taulukkoa.
-
-Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/filtering.test.ts), jotka voit suorittaa seuraavalla komennolla:
+Ratkaisullesi on kirjoitettu [valmiit testit](./src/tests/filtering-active.test.ts), jotka voit suorittaa seuraavilla komennoilla:
 
 ```
-npm test src/tests/filtering.test.ts
-
+npm test src/tests/filtering-active.test.ts
 
 ✓ filtering active posts (4)
   ✓ active posts are included in the result
   ✓ posts marked as deleted are excluded from the result
   ✓ deleted posts are removed from the beginning, end and between active articles
   ✓ the function does not modify the original array
+```
+
+Vaihtoehtoisesti voit myös suorittaa komentorivikäyttöliittymän ja tarkastaa manuaalisesti, ettei listauksessa millään postauksella ole luontiajan lisäksi poistoaikaa. Kolmas vaihtoehto on käyttää REST-rajapintaa (`npm run server` ja `http://localhost:3000/api/v1/user`) ja varmistaa, että tuloksessa ei ole sellaisia postauksia, joilla on `deletedAt`-arvo.
+
+Toteuta lisäksi samaan tiedostoon funktio `selectPostsByUser`, joka palauttaa uuden taulukon, joka sisältää vain annetun käyttäjän omat postaukset. Tämäkään funktio ei saa muokata alkuperäistä taulukkoa.
+
+```
+npm test src/tests/filtering-by-user.test.ts
+
 ✓ filtering by user (2)
   ✓ posts belonging to the given user are included in the result
   ✓ the function does not modify the original array
 ```
-
-Vaihtoehtoisesti voit myös suorittaa komentorivikäyttöliittymän ja tarkastaa manuaalisesti, ettei listauksessa millään postauksella ole luontiajan lisäksi poistoaikaa. Kolmas vaihtoehto on käyttää REST-rajapintaa (`npm run server` ja `http://localhost:3000/api/v1/user`) ja varmistaa, että tuloksessa ei ole sellaisia postauksia, joilla on `deletedAt`-arvo.
 
 
 ## Osa 2: `mapPostsToUsers` (20 % pisteistä)
@@ -261,7 +265,7 @@ npm test src/tests/mapping.test.ts
 Edellisessä osassa esitellyt vaihtoehdot komentirivikäyttöliittymän ja REST-rajapinnan käytöstä manuaaliseen testaukseen soveltuvat myös tähän ja seuraaviin osiin.
 
 
-## Osa 3: `sortPostsByPublishedDate` (40 % pisteistä)
+## Osa 3: `sortPostsByPublishedDate` (30 % pisteistä)
 
 Tehtävän kolmannessa osassa sinun tulee **järjestää** eli **lajitella** kirjoitukset (`Post`) niiden julkaisuajan mukaan käyttäen **itse toteuttamaasi lajittelualgoritmia**.
 
